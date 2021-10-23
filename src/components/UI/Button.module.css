@@ -1,0 +1,13 @@
+.btn {
+	padding: 1.15rem;
+	color: lightgreen;
+	background-color: rgba(255, 255, 255, 0.15);
+	border-radius: 10px;
+	border: 1px solid lightcoral;
+	width: 36vw;
+}
+
+.btn:active {
+	color: white;
+	border: 1px solid white;
+}

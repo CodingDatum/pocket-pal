@@ -2,12 +2,13 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1.5rem;
 	color: lightgreen;
+	padding: 10px;
+	height: 10vh;
 }
 
 .nav-bar h1 {
-	font-size: 2.6rem;
+	font-size: 2rem;
 }
 
 .hamburger-container {

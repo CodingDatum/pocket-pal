@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-// import styles from './App.module.css';
-import NavBar from './components/NavBar';
-import NavCol from './components/NavCol';
+import NavBar from './components/Nav/NavBar';
+import NavCol from './components/Nav/NavCol';
+import HomePage from './components/HomePage.js';
 
 function App() {
 
   const [navColumnActive, setNavColumnActive] = useState(false);
-
-  // should I use event here? as parameter?
 
   const hamburgerClickHandler = () =>{
     if(navColumnActive){
@@ -17,11 +15,11 @@ function App() {
     }
   }
 
-  // Render the buttons for the FEW apps you intend to deploy
   return (
     <React.Fragment>
-      <NavBar hamburgerClickHandler={hamburgerClickHandler} navColIsOpen={navColumnActive}/>
       {navColumnActive && <NavCol />}
+      <NavBar hamburgerClickHandler={hamburgerClickHandler} navColIsOpen={navColumnActive}/>
+      <HomePage activeApp={null} />
     </React.Fragment>
   );
 }
