@@ -1,0 +1,12 @@
+.nav-col {
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: black;
+	color: white;
+	width: 50%;
+	height: 100vh;
+	padding: 20px;
+	font-size: 2rem;
+	z-index: 10;
+}
