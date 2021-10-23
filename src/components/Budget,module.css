@@ -1,0 +1,6 @@
+.budget {
+	position: absolute;
+	width: 100vw;
+	height: 90vh;
+	background-color: rgba(255, 255, 255, 0.15);
+}
