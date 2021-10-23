@@ -37,6 +37,10 @@
 	transform: translatey(-50%);
 }
 
+.hamburger-container--x .hamburger {
+	visibility: hidden;
+}
+
 .hamburger-container::after {
 	content: "";
 	position: absolute;
@@ -45,4 +49,34 @@
 	background-color: lightcoral;
 	bottom: 0;
 	left: 0;
+}
+
+.hamburger-container--x {
+	position: relative;
+	width: 20px;
+	height: 19px;
+	z-index: 100;
+}
+.hamburger-container--x::before {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 3px;
+	background-color: white;
+	top: 0;
+	left: 0;
+	transform-origin: 50% 0;
+	transform: rotate(45deg) translateY(4px) scaleX(1.3) translateX(5px);
+}
+
+.hamburger-container--x::after {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 3px;
+	background-color: white;
+	bottom: 0;
+	left: 0;
+	transform-origin: 50% 0;
+	transform: rotate(-45deg) translateY(-6px) scaleX(1.3) translateX(5px);
 }

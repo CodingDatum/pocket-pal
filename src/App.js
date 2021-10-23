@@ -20,10 +20,9 @@ function App() {
   // Render the buttons for the FEW apps you intend to deploy
   return (
     <React.Fragment>
-      <NavBar hamburgerClickHandler={hamburgerClickHandler} />
+      <NavBar hamburgerClickHandler={hamburgerClickHandler} navColIsOpen={navColumnActive}/>
       {navColumnActive && <NavCol />}
     </React.Fragment>
-    
   );
 }
 

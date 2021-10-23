@@ -4,7 +4,14 @@ import styles from './NavCol.module.css';
 const NavCol = props => {
 
     return(
-        <div className={styles["nav-col"]}>testing</div>
+        <div className={styles["nav-col"]}>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+            <div>&#169;</div>
+        </div>
     )
 }
 
