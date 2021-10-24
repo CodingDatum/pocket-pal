@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './HomePage.module.css';
 import HomePageButtons from './HomePageButtons';
-import Budget from './Budget';
+import Budget from './Budget/Budget';
 
 const HomePage = props => {
 

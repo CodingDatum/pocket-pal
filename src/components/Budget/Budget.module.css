@@ -1,0 +1,46 @@
+.budget {
+	position: absolute;
+	width: 100vw;
+	height: 90%;
+	background-color: rgba(255, 255, 255, 0.15);
+	transform: translateX(-100%);
+	animation: animate-budget 0.3s ease-in-out forwards;
+	border: 5px solid lightgreen;
+}
+
+.budget h2 {
+	text-align: center;
+	color: lightcoral;
+	padding: 1rem;
+}
+
+.budget-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.budget-buttons,
+.budget-tracker {
+	flex-basis: 50%;
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.tracker {
+	height: 48vh;
+	width: 5rem;
+	background-color: lightcoral;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100px;
+}
+
+@keyframes animate-budget {
+	to {
+		transform: translateX(0);
+	}
+}
