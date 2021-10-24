@@ -6,6 +6,7 @@ import HomePage from './components/HomePage.js';
 function App() {
 
   const [navColumnActive, setNavColumnActive] = useState(false);
+  const [home, setHome] = useState(true);
 
   const hamburgerClickHandler = () =>{
     if(navColumnActive){
@@ -15,11 +16,19 @@ function App() {
     }
   }
 
+  const goHome = () => {
+    setHome(true)
+  }
+
+  const goAway = () => {
+    setHome(false)
+  }
+
   return (
     <React.Fragment>
-      {navColumnActive && <NavCol />}
+      {navColumnActive && <NavCol goHome={goHome}/>}
       <NavBar hamburgerClickHandler={hamburgerClickHandler} navColIsOpen={navColumnActive}/>
-      <HomePage activeApp={null} />
+      <HomePage home={home} goAway={goAway} />
     </React.Fragment>
   );
 }

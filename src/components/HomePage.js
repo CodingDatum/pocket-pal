@@ -1,23 +1,25 @@
 import React, { useState } from 'react';
-import styles from './HomePage.module.css'
+import styles from './HomePage.module.css';
 import HomePageButtons from './HomePageButtons';
 import Budget from './Budget';
 
 const HomePage = props => {
 
-    const [weAreHome, setWeAreHome] = useState(true);
-    const [weAreBudget, setWeAreBudget] = useState(false);
+    const [location, setLocation] = useState("");
+
+    if(location !== "home" && props.home){
+        setLocation("home");
+    }
 
     const renderBudgetPal = () => {
-        console.log("renderBudgetPal executed")
-        setWeAreHome(false)
-        setWeAreBudget(true)
+        props.goAway();
+        setLocation("budget");
     }
 
     return(
         <div className={styles["home-page"]}>
-            {weAreHome && <HomePageButtons renderBudgetPal={renderBudgetPal} />}
-            {weAreBudget && <Budget />}
+            {location === "home" && <HomePageButtons renderBudgetPal={renderBudgetPal} />}
+            {location === "budget" && <Budget />}
         </div>
     )
 }

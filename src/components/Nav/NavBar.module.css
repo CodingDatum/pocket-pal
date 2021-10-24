@@ -5,6 +5,8 @@
 	color: lightgreen;
 	padding: 10px 15px;
 	height: 10vh;
+	border: 5px solid lightgreen;
+	border-bottom: none;
 }
 
 .nav-bar h1 {

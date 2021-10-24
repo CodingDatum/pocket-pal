@@ -9,6 +9,7 @@ const HomePageButtons = props => {
             <li><Button buttonName="Tip Calculator" ></Button></li>
             <li><Button buttonName="Lists Pal" ></Button></li>
             <li><Button buttonName="Events Pal" ></Button></li>
+            <li><Button buttonName="Games" ></Button></li>
         </ul>
     )
 }
