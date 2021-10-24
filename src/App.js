@@ -17,6 +17,7 @@ function App() {
   }
 
   const goHome = () => {
+    setNavColumnActive(false)
     setHome(true)
   }
 

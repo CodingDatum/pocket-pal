@@ -17,7 +17,7 @@ const HomePage = props => {
     }
 
     return(
-        <div className={styles["home-page"]}>
+        <div className={styles.home}>
             {location === "home" && <HomePageButtons renderBudgetPal={renderBudgetPal} />}
             {location === "budget" && <Budget />}
         </div>
