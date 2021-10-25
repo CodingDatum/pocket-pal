@@ -1,9 +1,21 @@
-/* LIKELY DELETE THIS WHOLE FILE */
 .event-pal {
 	text-align: center;
-	color: white;
-	font-size: 3rem;
+	color: lightcoral;
 	border: 5px solid lightgreen;
 	height: 90vh;
-	padding: 1rem;
+}
+
+.event-pal ul {
+	list-style: none;
+}
+
+.event-tabs {
+	height: 90vh;
+	border: 1px solid cyan;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.event-tab {
 }
