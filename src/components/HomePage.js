@@ -6,6 +6,7 @@ import TipCalculator from './TipCalc/TipCalculator';
 import ListPal from './Lists/ListPal';
 import EventPal from './EventPal/EventPal';
 import Games from './Games/Games';
+import ListProvider from './Lists/ListProvider';
 
 const HomePage = props => {
 
@@ -45,7 +46,7 @@ const HomePage = props => {
             {location === "home" && <HomePageButtons renderBudgetPal={renderBudgetPal} renderTipCalc={renderTipCalc} renderListPal={renderListPal} renderEventPal={renderEventPal} renderGames={renderGames} />}
             {location === "budget" && <Budget />}
             {location === "tip" && <TipCalculator />}
-            {location === "list" && <ListPal />}
+            {location === "list" && <ListProvider><ListPal /></ListProvider>}
             {location === "event" && <EventPal />}
             {location === "game" && <Games />}
             
