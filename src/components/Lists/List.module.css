@@ -1,0 +1,23 @@
+.container {
+	border: 1px solid pink;
+}
+
+.heading {
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.list-container {
+	background-color: lightcoral;
+	color: lightgreen;
+}
+
+.list-container ul {
+	list-style: none;
+}
+
+.list-container li {
+	padding: 0.2rem;
+}

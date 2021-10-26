@@ -5,3 +5,7 @@
 	height: 90vh;
 	border: 5px solid lightgreen;
 }
+
+.list-pal h3 {
+	padding: 0.8rem;
+}
