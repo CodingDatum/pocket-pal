@@ -54,3 +54,14 @@
 	color: lightgreen;
 	border: 2.5px solid lightgreen;
 }
+
+.dick {
+	color: lightgreen;
+	font-size: 1.2rem;
+}
+
+.tip {
+	color: lightgreen;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
