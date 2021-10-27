@@ -7,11 +7,13 @@ const Budget = props => {
     const [goal, setGoal] = useState(100);
     const [progress, setProgress] = useState(20);
     const [isAddingMoney, setIsAddingMoney] = useState(false);
-    const [currentExpense, setCurrentExpense] = useState(null);
+    
 
     const addMoneyHandler = () => {
         setIsAddingMoney(true)
     }
+
+    const [currentExpense, setCurrentExpense] = useState(null);
 
     const calculatorHandler = (event) => {
         event.preventDefault()
@@ -77,26 +79,26 @@ const Budget = props => {
                 ${progress}/${goal}
             </div>
             {isAddingMoney && <div className={styles["modal-container"]}>
-                    <h4>How much?</h4>
-                    <div className={styles["button-container"]}>
-                        <button onClick={calculatorHandler} value="1">1</button>
-                        <button onClick={calculatorHandler} value="2">2</button>
-                        <button onClick={calculatorHandler} value="3">3</button>
-                        <button onClick={calculatorHandler} value="4">4</button>
-                        <button onClick={calculatorHandler} value="5">5</button>
-                        <button onClick={calculatorHandler} value="6">6</button>
-                        <button onClick={calculatorHandler} value="7">7</button>
-                        <button onClick={calculatorHandler} value="8">8</button>
-                        <button onClick={calculatorHandler} value="9">9</button>
-                        <button onClick={calculatorHandler} value=".">.</button>
-                        <button onClick={calculatorHandler} value="0">0</button>
-                        <button onClick={clearHandler} >cl</button>
-                    </div>
-                    <div className={styles["current-expense"]}>
-                        {currentExpense || "expense"}
-                    </div>
-                    <button onClick={updateGoalHandler}>Add</button>
-                </div>}
+            <h4>How much?</h4>
+            <div className={styles["button-container"]}>
+                <button onClick={calculatorHandler} value="1">1</button>
+                <button onClick={calculatorHandler} value="2">2</button>
+                <button onClick={calculatorHandler} value="3">3</button>
+                <button onClick={calculatorHandler} value="4">4</button>
+                <button onClick={calculatorHandler} value="5">5</button>
+                <button onClick={calculatorHandler} value="6">6</button>
+                <button onClick={calculatorHandler} value="7">7</button>
+                <button onClick={calculatorHandler} value="8">8</button>
+                <button onClick={calculatorHandler} value="9">9</button>
+                <button onClick={calculatorHandler} value=".">.</button>
+                <button onClick={calculatorHandler} value="0">0</button>
+                <button onClick={clearHandler} >cl</button>
+            </div>
+            <div className={styles["current-expense"]}>
+                {currentExpense || "expense"}
+            </div>
+            <button onClick={updateGoalHandler}>Add</button>
+        </div>}
         </div>
     )
 }
