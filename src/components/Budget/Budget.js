@@ -28,6 +28,7 @@ const Budget = props => {
     
 
     const addMoneyHandler = () => {
+        setCurrentExpense(null)
         setIsAddingMoney(true)
     }
 
