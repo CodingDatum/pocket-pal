@@ -97,7 +97,7 @@ const TipCalculator = props => {
             <div className={styles["tip-amount"]}>
                 <button className={styles.neg} onClick={decreaseTipHandler}>-</button>
                 {!dontBeADick && <span>{tipAmount}%</span>}
-                {dontBeADick && <div className={styles.dick}>Dont Be A Dick</div>}
+                {dontBeADick && <div className={styles.dick}>Dont Be A Dick...</div>}
                 <button className={styles.pos} onClick={increaseTipHandler}>+</button>
             </div>
             {!calculatedTip && <div className={styles.tip}>Calculated Tip</div>}
