@@ -12,6 +12,7 @@ const TipCalculator = props => {
     const [tipAmount, setTipAmount] = useState(20)
     const [dontBeADick, setDontBeADick] = useState(false)
     const [calculatedTip, setCalculatedTip] = useState(false);
+    const [goingUp, setGoingUp] = useState(false)
 
     const buttonHandlerNum = (e) => {
         e.preventDefault();
@@ -40,6 +41,7 @@ const TipCalculator = props => {
 
     const increaseTipHandler = () => {
         if(activeBill){
+            setGoingUp(true)
             setTipAmount(tipAmount+1)
             setDontBeADick(false)
             calculateTipHandler()
@@ -52,17 +54,22 @@ const TipCalculator = props => {
             if(tipAmount === 15){
                 setDontBeADick(true)
             }else{
+                setGoingUp(false)
                 setTipAmount(tipAmount-1)
                 calculateTipHandler()
+                
             }
         }
     }
 
-    const calculateTipHandler = () => {
+    const calculateTipHandler = (up) => {
         let adjustedBill = +billAmount;
         let adjustedTip = tipAmount;
+        adjustedTip += 1;
+        if(!goingUp){
+            adjustedTip -= 2;
+        }
         adjustedTip = "." + adjustedTip;
-        adjustedTip = +adjustedTip;
         console.log(adjustedBill)
         console.log(adjustedTip)
         let tip = adjustedBill * adjustedTip;
