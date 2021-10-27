@@ -1,0 +1,41 @@
+.modal-container {
+	position: relative;
+	transform: translateY(-100%);
+	width: 100vw;
+	height: 80vh;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	z-index: 50;
+	left: -5px;
+}
+
+.modal-container h4 {
+	font-size: 2rem;
+	color: lightcoral;
+	font-weight: bold;
+}
+
+.button-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	gap: 10px;
+	width: 80%;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-container button {
+	width: 40px;
+	height: 40px;
+	border: 2px solid lightgreen;
+	color: lightgreen;
+	background-color: rgb(23, 23, 31);
+}
+
+.current-expense {
+	font-size: 1.6rem;
+	font-weight: bold;
+}

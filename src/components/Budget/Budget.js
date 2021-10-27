@@ -7,12 +7,6 @@ const Budget = props => {
     const [goal, setGoal] = useState(100);
     const [progress, setProgress] = useState(20);
     const [isAddingMoney, setIsAddingMoney] = useState(false);
-    
-
-    const addMoneyHandler = () => {
-        setIsAddingMoney(true)
-    }
-
     const [currentExpense, setCurrentExpense] = useState(null);
 
     const calculatorHandler = (event) => {
@@ -28,16 +22,20 @@ const Budget = props => {
         }
     }
 
+    const clearHandler = () => {
+        setCurrentExpense(null);
+    }
+    
+
+    const addMoneyHandler = () => {
+        setIsAddingMoney(true)
+    }
+
     const updateGoalHandler = () => {
         let ourProgress = +progress;
         let ourExpense = +currentExpense;
         setProgress(ourProgress+ourExpense);
         setIsAddingMoney(false)
-        setCurrentExpense(null)
-    }
-
-    const clearHandler = () => {
-        setCurrentExpense(null);
     }
 
     const setGoalHandler = () => {
@@ -49,7 +47,6 @@ const Budget = props => {
         let bar = progress/goal;
         bar = bar * 100;
         bar = bar + "%";
-        console.log(bar)
         return bar
     }
 
@@ -99,7 +96,7 @@ const Budget = props => {
             </div>
             <button onClick={updateGoalHandler}>Add</button>
         </div>}
-        </div>
+    </div>
     )
 }
 
