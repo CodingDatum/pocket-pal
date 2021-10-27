@@ -47,6 +47,7 @@
 	background-color: lightcoral;
 	position: absolute;
 	bottom: 0;
+	transition: 0.5s height ease;
 }
 
 @keyframes animate-budget {
