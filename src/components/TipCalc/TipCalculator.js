@@ -62,7 +62,7 @@ const TipCalculator = props => {
         }
     }
 
-    const calculateTipHandler = (up) => {
+    const calculateTipHandler = () => {
         let adjustedBill = +billAmount;
         let adjustedTip = tipAmount;
         adjustedTip += 1;
