@@ -53,6 +53,10 @@ const Budget = props => {
 
     let newBar = trackerBar()
 
+    const refreshGoalHandler = () => {
+        setGoal(0);
+        setProgress(0);
+    }
 
     return (
         <div className={styles.budget}>
@@ -61,7 +65,7 @@ const Budget = props => {
                 <div className={styles["budget-buttons"]}>
                     <Button onClick={setGoalHandler} buttonName="Set Goal"/>
                     <Button onClick={addMoneyHandler} buttonName="Add $" />
-                    <Button buttonName="Refresh"/>
+                    <Button onClick={refreshGoalHandler} buttonName="Refresh"/>
                 </div>
                 <div className={styles["budget-tracker"]}>
                     <div className={styles.tracker}>
