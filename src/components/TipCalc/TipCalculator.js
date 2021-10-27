@@ -63,6 +63,8 @@ const TipCalculator = props => {
         let adjustedTip = tipAmount;
         adjustedTip = "." + adjustedTip;
         adjustedTip = +adjustedTip;
+        console.log(adjustedBill)
+        console.log(adjustedTip)
         let tip = adjustedBill * adjustedTip;
         setCalculatedTip(tip)
     }
