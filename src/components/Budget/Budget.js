@@ -8,7 +8,7 @@ const Budget = props => {
     const [goal, setGoal] = useState(100);
     const [progress, setProgress] = useState(20);
     const [isAddingMoney, setIsAddingMoney] = useState(false);
-    const [isAddingTotal, setIsAddingTotal] = useState(false)
+    const [isAddingTotal, setIsAddingTotal] = useState(false);
 
     const addMoneyHandler = () => {
         setIsAddingMoney(true)
