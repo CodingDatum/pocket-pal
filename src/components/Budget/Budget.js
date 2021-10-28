@@ -56,6 +56,7 @@ const Budget = props => {
 
     const changeGoal = (newGoal) => {
         setGoal(newGoal)
+        setProgress(null)
         setIsAddingTotal(false)
     }
 
@@ -64,7 +65,7 @@ const Budget = props => {
             <h2>Budget Pal</h2>
             <div className={styles["budget-container"]}>
                 <div className={styles["budget-buttons"]}>
-                    <Button onClick={setGoalHandler} buttonName="Set Goal"/>
+                    <Button onClick={setGoalHandler} buttonName="New Goal"/>
                     <Button onClick={addMoneyHandler} buttonName="Add $" />
                     <Button onClick={refreshGoalHandler} buttonName="Refresh"/>
                 </div>

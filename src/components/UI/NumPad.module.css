@@ -1,6 +1,6 @@
 .modal-container {
 	position: relative;
-	transform: translateY(-100%);
+	transform: translateY(-110%);
 	width: 100vw;
 	height: 80vh;
 	background-color: white;
@@ -33,6 +33,7 @@
 	border: 2px solid lightgreen;
 	color: lightgreen;
 	background-color: rgb(23, 23, 31);
+	font-size: 2rem;
 }
 
 .current-expense {
