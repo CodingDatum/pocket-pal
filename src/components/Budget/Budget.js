@@ -1,14 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Budget.module.css';
 import Button from '../UI/Button';
 import NumPad from '../UI/NumPad';
 
 const Budget = props => {
 
-    const [goal, setGoal] = useState(100);
-    const [progress, setProgress] = useState(20);
+    const [goal, setGoal] = useState(() => {
+        const goalSaved = localStorage.getItem("goal");
+        const goalValue = JSON.parse(goalSaved);
+        return goalValue || 100;
+    });
+    const [progress, setProgress] = useState(() => {
+        const progressSaved = localStorage.getItem("goal-progress");
+        const progressValue = JSON.parse(progressSaved);
+        return progressValue || 0;
+    });
     const [isAddingMoney, setIsAddingMoney] = useState(false);
     const [isAddingTotal, setIsAddingTotal] = useState(false);
+
+    useEffect(()=>{
+        localStorage.setItem("goal", JSON.stringify(goal));
+    }, [goal]);
+
+    useEffect(() => {
+        localStorage.setItem("goal-progress", JSON.stringify(progress))
+    }, [progress]);
 
     const addMoneyHandler = () => {
         setIsAddingMoney(true)
