@@ -14,7 +14,7 @@ const Budget = props => {
     }
 
     const updateGoalHandler = (currentExpense) => {
-        let ourProgress = +progress;
+        let ourProgress = progress;
         let ourExpense = +currentExpense;
         setProgress(ourProgress+ourExpense);
         setIsAddingMoney(false)

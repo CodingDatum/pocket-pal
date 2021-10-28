@@ -22,6 +22,10 @@ const NumPad = props => {
         setCurrentExpense(null);
     }
 
+    const updateGoalHandler = () =>{
+        props.updateGoalHandler(currentExpense)
+    }
+
     return(
         <div className={styles["modal-container"]}>
             <h4>How much?</h4>
@@ -42,7 +46,7 @@ const NumPad = props => {
             <div className={styles["current-expense"]}>
                 {currentExpense || "expense"}
             </div>
-            {currentExpense && <button onClick={props.updateGoalHandler(currentExpense)}>Add</button>}
+            <button onClick={updateGoalHandler}>Add</button>
         </div>
     )
 }
