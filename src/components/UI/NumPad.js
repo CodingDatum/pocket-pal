@@ -23,7 +23,7 @@ const NumPad = props => {
     }
 
     const updateGoalHandler = () =>{
-        props.updateGoalHandler(currentExpense)
+        props.submitButton(currentExpense)
     }
 
     return(

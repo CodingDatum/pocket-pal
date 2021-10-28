@@ -8,6 +8,7 @@ const Budget = props => {
     const [goal, setGoal] = useState(100);
     const [progress, setProgress] = useState(20);
     const [isAddingMoney, setIsAddingMoney] = useState(false);
+    const [isAddingTotal, setIsAddingTotal] = useState(false)
 
     const addMoneyHandler = () => {
         setIsAddingMoney(true)
@@ -21,8 +22,7 @@ const Budget = props => {
     }
 
     const setGoalHandler = () => {
-        console.log("set goal handler")
-        setGoal(null)
+        setIsAddingTotal(true);
     }
 
     const trackerBar = () => {
@@ -35,8 +35,12 @@ const Budget = props => {
     let newBar = trackerBar()
 
     const refreshGoalHandler = () => {
-        setGoal(0);
         setProgress(0);
+    }
+
+    const changeGoal = (newGoal) => {
+        setGoal(newGoal)
+        setIsAddingTotal(false)
     }
 
     return (
@@ -57,7 +61,8 @@ const Budget = props => {
             <div className={styles["budget-footer"]}>
                 ${progress}/${goal}
             </div>
-            {isAddingMoney && <NumPad updateGoalHandler={updateGoalHandler} />}
+            {isAddingMoney && <NumPad submitButton={updateGoalHandler} />}
+            {isAddingTotal && <NumPad submitButton={changeGoal} />}
     </div>
     )
 }
