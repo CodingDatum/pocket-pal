@@ -9,7 +9,7 @@ const NumPad = props => {
         event.preventDefault()
         let digit = event.target.value;
         if(!currentExpense){
-            setCurrentExpense(digit)
+            setCurrentExpense(digit+'')
         }else{
             digit = digit + ''
             let expense = currentExpense + '';
@@ -42,7 +42,7 @@ const NumPad = props => {
             <div className={styles["current-expense"]}>
                 {currentExpense || "expense"}
             </div>
-            <button onClick={props.updateGoalHandler(currentExpense)}>Add</button>
+            {currentExpense && <button onClick={props.updateGoalHandler(currentExpense)}>Add</button>}
         </div>
     )
 }
