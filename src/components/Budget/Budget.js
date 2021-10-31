@@ -65,8 +65,8 @@ const Budget = props => {
             <h2>Budget Pal</h2>
             <div className={styles["budget-container"]}>
                 <div className={styles["budget-buttons"]}>
-                    <Button onClick={setGoalHandler} buttonName="New Goal"/>
                     <Button onClick={addMoneyHandler} buttonName="Add $" />
+                    <Button onClick={setGoalHandler} buttonName="New Goal"/>
                     <Button onClick={refreshGoalHandler} buttonName="Refresh"/>
                 </div>
                 <div className={styles["budget-tracker"]}>
