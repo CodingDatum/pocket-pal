@@ -13,6 +13,9 @@ const ListProvider = props => {
         }]
     }
 
+    // var storableList = JSON.stringify(listContext.lists);
+
+
     return <ListContext.Provider value={listContext}>{props.children}</ListContext.Provider>
 }
 
