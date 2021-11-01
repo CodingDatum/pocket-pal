@@ -50,7 +50,7 @@ const ListProvider = props => {
     }
 
     const deleteItem = (listName) => {
-        let newList = lists.filter(listObject => listObject.name !== listName);
+        let newList = lists.filter(listObject => listObject.listName !== listName);
         setLists(newList);
         localStorage.setItem("lists", JSON.stringify(newList))
         console.log(lists)
