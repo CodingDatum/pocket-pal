@@ -9,3 +9,21 @@
 .list-pal h3 {
 	padding: 0.8rem;
 }
+
+.add-list-contaner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.add-list-container input {
+	padding: 10px;
+	width: 8rem;
+	margin-left: 10px;
+	border: 1px solid lightgreen;
+}
+
+.add-list-container input::placeholder {
+	color: lightcoral;
+	font-weight: bold;
+}
