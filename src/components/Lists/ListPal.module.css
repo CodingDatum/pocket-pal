@@ -4,6 +4,14 @@
 	color: white;
 	height: 90vh;
 	border: 5px solid lightgreen;
+	transform: translateX(-100%);
+	animation: animate 0.3s ease forwards;
+}
+
+@keyframes animate {
+	to {
+		transform: translateX(0);
+	}
 }
 
 .list-pal h3 {

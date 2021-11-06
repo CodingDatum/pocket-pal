@@ -29,18 +29,6 @@
 .list-container li {
 	padding: 0.2rem;
 }
-
-<<<<<<< HEAD
-.add-list-item-button {
-	font-size: 1.25rem;
-	padding: 0.4rem;
-}
-
-.list-item-input {
-	padding: 0.4rem;
-	transform: translateY(-5px);
-	margin-left: 10px;
-=======
 .container input {
 	padding: 0.5rem;
 }
@@ -52,5 +40,4 @@
 	background-color: #3f3f3f;
 	color: lightgreen;
 	margin-right: 1rem;
->>>>>>> list-pal
 }

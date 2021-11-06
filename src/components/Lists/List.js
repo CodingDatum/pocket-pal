@@ -57,11 +57,7 @@ const List = props => {
             </div>
             <div className={styles["list-container"]}>
                 {listIsActive && <ul>{listItems}
-<<<<<<< HEAD
-                    <li><button className={styles["add-list-item-button"]} onClick={submitItemToList}>+</button><input className={styles["list-item-input"]} type="text" onChange={listItemHandler}></input></li></ul>}
-=======
                     <li><button onClick={submitItemToList}>+</button><input type="text" onChange={listItemHandler} value={workingListItem}></input></li></ul>}
->>>>>>> list-pal
             </div>
         </div>}
         </React.Fragment>

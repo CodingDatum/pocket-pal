@@ -27,7 +27,7 @@ const ListProvider = props => {
     const addToList = listObject => {
         let newList = {
             listName: listObject,
-            listItems: ["test new list"]
+            listItems: []
         }
         setLists( prevList => [
             ...prevList, newList]
