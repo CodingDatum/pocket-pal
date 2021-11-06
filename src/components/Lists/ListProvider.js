@@ -10,7 +10,7 @@ const ListProvider = props => {
             listItems: ["Make a List!", "Make A List of Lists!!!"]
         },{
             listName: "press arrow to view list -->",
-            listItems: ["Press it again to close the tab", "Press the + Button on the left of the list Title to add a List Item"]
+            listItems: ["Press it again to close the tab", "Press the X Button on the left of the list Title to remove this list"]
         }]
 
     const [lists, setLists] = useState(() => {
@@ -35,7 +35,6 @@ const ListProvider = props => {
     }
 
     const addItemToList = (listItem, listName) => {
-        console.log("now in the listProvider.js file we need to add item: " + listItem + "to List: " + listName + "using an advanced array method??")
         let subLists = lists;
         
         subLists.forEach((listObject) => {
