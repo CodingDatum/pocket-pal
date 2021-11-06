@@ -1,5 +1,5 @@
 {
-  "homepage" : "http://CodingDatum.github.io/pocket-pal",
+  "homepage": "http://CodingDatum.github.io/pocket-pal",
   "name": "pocket-pal",
   "version": "0.1.0",
   "private": true,
@@ -10,6 +10,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "uifx": "^2.0.7",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
