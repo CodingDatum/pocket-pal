@@ -26,15 +26,13 @@ const List = props => {
 
     const listItemHandler = e => {
         let listItemInput = e.target.value;
-        console.log("we are about to add this item to out list:" + listItemInput + "to list with name:" + props.name)
         setWorkingListItem(listItemInput)
     }
 
     const submitItemToList = () => {
-        console.log(workingListItem)
         ctx.addItemToList(workingListItem, props.name)
+        setWorkingListItem("")
         refreshHandler()
-        
     }
 
     const refreshHandler = () => {
@@ -47,7 +45,6 @@ const List = props => {
 
     const removeListHandler = () => {
         ctx.deleteItem(props.name)
-        console.log("remove this list!");
     }
 
     return (
@@ -60,7 +57,11 @@ const List = props => {
             </div>
             <div className={styles["list-container"]}>
                 {listIsActive && <ul>{listItems}
+<<<<<<< HEAD
                     <li><button className={styles["add-list-item-button"]} onClick={submitItemToList}>+</button><input className={styles["list-item-input"]} type="text" onChange={listItemHandler}></input></li></ul>}
+=======
+                    <li><button onClick={submitItemToList}>+</button><input type="text" onChange={listItemHandler} value={workingListItem}></input></li></ul>}
+>>>>>>> list-pal
             </div>
         </div>}
         </React.Fragment>

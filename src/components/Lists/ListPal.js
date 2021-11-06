@@ -26,7 +26,8 @@ const ListPal = props => {
     }
 
     const addNewListHandler = () => {
-        ctx.addToList(listTitle)
+        ctx.addToList(listTitle);
+        setListTitle("")
     }
 
     return(
@@ -35,7 +36,7 @@ const ListPal = props => {
 
                 <div className={styles["add-list-container"]}>
                     <Button buttonName="Add List" onClick={addNewListHandler} />
-                    <input type="text" placeholder="click here" onChange={addListTitleHandler}></input>
+                    <input type="text" onChange={addListTitleHandler} value={listTitle}></input>
                 </div>
                 
                 <h3>My Lists:</h3>
