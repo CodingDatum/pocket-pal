@@ -1,6 +1,7 @@
 .sound-game {
-	font-size: 2rem;
-	font-weight: bold;
-	color: white;
-	letter-spacing: 3px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100%;
 }
