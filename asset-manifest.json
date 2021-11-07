@@ -1,22 +1,26 @@
 {
   "files": {
-    "main.css": "/pocket-pal/static/css/main.cdf7c00b.chunk.css",
-    "main.js": "/pocket-pal/static/js/main.1e8f58d9.chunk.js",
-    "main.js.map": "/pocket-pal/static/js/main.1e8f58d9.chunk.js.map",
-    "runtime-main.js": "/pocket-pal/static/js/runtime-main.edfc1a67.js",
-    "runtime-main.js.map": "/pocket-pal/static/js/runtime-main.edfc1a67.js.map",
-    "static/js/2.7483e3e5.chunk.js": "/pocket-pal/static/js/2.7483e3e5.chunk.js",
-    "static/js/2.7483e3e5.chunk.js.map": "/pocket-pal/static/js/2.7483e3e5.chunk.js.map",
-    "static/js/3.aa9ca04f.chunk.js": "/pocket-pal/static/js/3.aa9ca04f.chunk.js",
-    "static/js/3.aa9ca04f.chunk.js.map": "/pocket-pal/static/js/3.aa9ca04f.chunk.js.map",
+    "main.css": "/pocket-pal/static/css/main.0bebcf7a.chunk.css",
+    "main.js": "/pocket-pal/static/js/main.6f0238f3.chunk.js",
+    "main.js.map": "/pocket-pal/static/js/main.6f0238f3.chunk.js.map",
+    "runtime-main.js": "/pocket-pal/static/js/runtime-main.a643f7fd.js",
+    "runtime-main.js.map": "/pocket-pal/static/js/runtime-main.a643f7fd.js.map",
+    "static/js/2.eba3c06c.chunk.js": "/pocket-pal/static/js/2.eba3c06c.chunk.js",
+    "static/js/2.eba3c06c.chunk.js.map": "/pocket-pal/static/js/2.eba3c06c.chunk.js.map",
+    "static/js/3.6d4b931b.chunk.js": "/pocket-pal/static/js/3.6d4b931b.chunk.js",
+    "static/js/3.6d4b931b.chunk.js.map": "/pocket-pal/static/js/3.6d4b931b.chunk.js.map",
+    "static/js/4.e043ccb0.chunk.js": "/pocket-pal/static/js/4.e043ccb0.chunk.js",
+    "static/js/4.e043ccb0.chunk.js.map": "/pocket-pal/static/js/4.e043ccb0.chunk.js.map",
     "index.html": "/pocket-pal/index.html",
-    "static/css/main.cdf7c00b.chunk.css.map": "/pocket-pal/static/css/main.cdf7c00b.chunk.css.map",
-    "static/js/2.7483e3e5.chunk.js.LICENSE.txt": "/pocket-pal/static/js/2.7483e3e5.chunk.js.LICENSE.txt"
+    "static/css/main.0bebcf7a.chunk.css.map": "/pocket-pal/static/css/main.0bebcf7a.chunk.css.map",
+    "static/js/2.eba3c06c.chunk.js.LICENSE.txt": "/pocket-pal/static/js/2.eba3c06c.chunk.js.LICENSE.txt",
+    "static/js/3.6d4b931b.chunk.js.LICENSE.txt": "/pocket-pal/static/js/3.6d4b931b.chunk.js.LICENSE.txt",
+    "static/media/spooky.a6a30148.mp3": "/pocket-pal/static/media/spooky.a6a30148.mp3"
   },
   "entrypoints": [
-    "static/js/runtime-main.edfc1a67.js",
-    "static/js/2.7483e3e5.chunk.js",
-    "static/css/main.cdf7c00b.chunk.css",
-    "static/js/main.1e8f58d9.chunk.js"
+    "static/js/runtime-main.a643f7fd.js",
+    "static/js/2.eba3c06c.chunk.js",
+    "static/css/main.0bebcf7a.chunk.css",
+    "static/js/main.6f0238f3.chunk.js"
   ]
 }
