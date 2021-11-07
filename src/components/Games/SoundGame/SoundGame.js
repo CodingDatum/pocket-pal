@@ -11,7 +11,6 @@ import dropletMP3 from './sounds/Droplet.mp3';
 
 // assign sounds:
 
-
 const SoundGame = props =>{
 
     const [playSpooky] = useSound(spookyMP3);
