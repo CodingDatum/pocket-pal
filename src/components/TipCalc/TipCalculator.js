@@ -8,7 +8,7 @@ import styles from './TipCalculator.module.css';
 const TipCalculator = props => {
 
     const [activeBill, setActiveBill] = useState(false)
-    const [billAmount, setBillAmount] = useState(0)
+    const [billAmount, setBillAmount] = useState('')
     const [tipAmount, setTipAmount] = useState(20)
     const [dontBeADick, setDontBeADick] = useState(false)
     const [calculatedTip, setCalculatedTip] = useState(false);
@@ -18,18 +18,13 @@ const TipCalculator = props => {
         e.preventDefault();
         setActiveBill(true);
         const eventTargetValue = e.target.value
-
-        if(!activeBill){
-            setBillAmount(eventTargetValue);
-        }else{
-            setBillAmount(billAmount + eventTargetValue)
-        }
+        setBillAmount(billAmount + eventTargetValue)
     }
 
     const clearButtonHandler = () => {
         setCalculatedTip(false)
         setActiveBill(false)
-        setBillAmount(null)
+        setBillAmount('')
     }
 
     const dotHandler = () => {
