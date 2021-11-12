@@ -68,7 +68,7 @@ const TipCalculator = props => {
         console.log(adjustedBill)
         console.log(adjustedTip)
         let tip = adjustedBill * adjustedTip;
-        setCalculatedTip(tip)
+        setCalculatedTip(tip.toFixed(2))
     }
 
     return (
