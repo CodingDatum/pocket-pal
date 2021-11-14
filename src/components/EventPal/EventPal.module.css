@@ -17,5 +17,9 @@
 	align-items: center;
 }
 
-.event-tab {
+.development {
+	padding: 2rem;
+	text-align: center;
+	color: lightcoral;
+	font-size: 3rem;
 }

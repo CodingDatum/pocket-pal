@@ -74,7 +74,7 @@ const TipCalculator = props => {
     return (
         <div className={styles["tip-calculator"]}>
             {!activeBill && <span>Enter Amount Below</span>}
-            {activeBill && <span>{billAmount}</span>}
+            {activeBill && <span>${billAmount}</span>}
             <div className={styles["tip-nums"]}>
                 <button onClick={buttonHandlerNum} value="1">1</button>
                 <button onClick={buttonHandlerNum} value="2">2</button>
@@ -96,7 +96,7 @@ const TipCalculator = props => {
                 <button className={styles.pos} onClick={increaseTipHandler}>+</button>
             </div>
             {!calculatedTip && <div className={styles.pretip}>(Tip Amount)</div>}
-            {calculatedTip && <div className={styles.tip}>{calculatedTip}</div>}
+            {calculatedTip && <div className={styles.tip}>${calculatedTip}</div>}
         </div>
     )
 };
