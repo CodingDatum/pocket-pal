@@ -1,9 +1,9 @@
 .btn {
 	padding: 1.15rem;
-	color: lightgreen;
-	background-color: rgba(255, 255, 255, 0.15);
-	border-radius: 10px;
-	border: 1px solid lightcoral;
+	color: #e2ecf8;
+	background-color: rgb(92, 6, 133);
+	border-radius: 5px;
+	border: 1px solid rgb(92, 6, 133);
 	width: 36vw;
 	font-size: 1.1rem;
 }

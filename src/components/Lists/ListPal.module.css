@@ -1,9 +1,8 @@
 .list-pal {
 	text-align: center;
 	padding: 2rem;
-	color: white;
 	height: 90vh;
-	border: 5px solid lightgreen;
+	border: 5px solid rgb(92, 6, 133);
 	transform: translateX(-100%);
 	animation: animate 0.3s ease forwards;
 }
@@ -16,6 +15,7 @@
 
 .list-pal h3 {
 	padding: 0.8rem;
+	color: rgb(92, 6, 133);
 }
 
 .add-list-contaner {
@@ -28,10 +28,10 @@
 	padding: 10px;
 	width: 8rem;
 	margin-left: 10px;
-	border: 1px solid lightgreen;
+	border: 1px solid #5283ac;
 }
 
 .add-list-container input::placeholder {
-	color: lightcoral;
+	color: #5283ac;
 	font-weight: bold;
 }

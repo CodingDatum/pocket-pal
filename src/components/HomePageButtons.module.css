@@ -5,7 +5,8 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
-	border: 5px solid lightgreen;
+	background-color: #e2ecf8;
+	border: 5px solid rgb(92, 6, 133);
 	animation: home-page 0.5s ease-in-out forwards;
 }
 

@@ -5,13 +5,13 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
-	border: 5px solid lightgreen;
+	border: 5px solid rgb(92, 6, 133);
 	transform: translateX(-100%);
 	animation: animate-budget 0.3s ease-in-out forwards;
 }
 
 .tip-calculator span {
-	color: lightgreen;
+	color: #5283ac;
 	font-size: 1.6rem;
 }
 
@@ -24,11 +24,11 @@
 .tip-nums button {
 	height: 60px;
 	width: 60px;
-	color: lightcoral;
-	background-color: lightgreen;
+	color: #e2ecf8;
+	background-color: rgb(92, 6, 133);
 	font-size: 1.6rem;
 	font-weight: bold;
-	border: 2.5px solid lightcoral;
+	border: 2.5px solid rgb(92, 6, 133);
 }
 
 .tip-amount {
@@ -51,22 +51,24 @@
 }
 
 .neg {
-	color: lightcoral;
-	border: 2.5px solid lightcoral;
+	color: #e2ecf8;
+	border: 2.5px solid #5283ac;
+	background-color: #5283ac;
 }
 
 .pos {
-	color: lightgreen;
-	border: 2.5px solid lightgreen;
+	color: #e2ecf8;
+	border: 2.5px solid #5283ac;
+	background-color: #5283ac;
 }
 
 .dick {
-	color: lightgreen;
+	color: #5283ac;
 	font-size: 1.2rem;
 }
 
 .tip {
-	color: lightgreen;
+	color: #5283ac;
 	font-size: 2rem;
 	font-weight: bold;
 }
@@ -74,7 +76,7 @@
 .pretip {
 	font-size: 1rem;
 	font-weight: none;
-	color: white;
+	color: #5283ac;
 }
 
 @keyframes animate-budget {
