@@ -18,7 +18,7 @@ const Piano = props => {
                 <div className={styles["black-keys"]}>
                     <span></span>
                     <span></span>
-                    <span></span>
+                    <span className={styles.hidden}></span>
                     <span></span>
                     <span></span>
                     <span></span>

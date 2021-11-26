@@ -45,3 +45,8 @@
 	height: 80%;
 	width: 25px;
 }
+
+.hidden {
+	visibility: hidden;
+	z-index: -10;
+}
