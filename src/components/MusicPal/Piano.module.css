@@ -1,0 +1,47 @@
+.piano {
+	width: 100%;
+	height: 200px;
+	background-color: #5283ac;
+	position: relative;
+	padding: 0 1rem;
+	display: flex;
+	justify-content: center;
+}
+
+.key-container {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	width: 90%;
+	height: 70%;
+	background-color: white;
+}
+
+.white-keys {
+	position: absolute;
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+.white-keys span {
+	width: 100%;
+	height: 100%;
+	border: 1px solid black;
+}
+
+.black-keys {
+	position: absolute;
+	height: 80%;
+	width: 100%;
+	top: 0;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 0 10px;
+}
+
+.black-keys span {
+	background-color: black;
+	height: 80%;
+	width: 25px;
+}

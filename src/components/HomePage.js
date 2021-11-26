@@ -4,9 +4,9 @@ import HomePageButtons from './HomePageButtons';
 import Budget from './Budget/Budget';
 import TipCalculator from './TipCalc/TipCalculator';
 import ListPal from './Lists/ListPal';
-import EventPal from './EventPal/EventPal';
 import Games from './Games/Games';
 import ListProvider from './Lists/ListProvider';
+import MusicPal from './MusicPal/MusicPal';
 
 const HomePage = props => {
 
@@ -31,9 +31,9 @@ const HomePage = props => {
         setLocation("list");
     }
 
-    const renderEventPal = () => {
+    const renderMusicPal = () => {
         props.goAway();
-        setLocation("event");
+        setLocation("music");
     }
 
     const renderGames = () => {
@@ -43,11 +43,11 @@ const HomePage = props => {
 
     return(
         <div className={styles.home}>
-            {location === "home" && <HomePageButtons renderBudgetPal={renderBudgetPal} renderTipCalc={renderTipCalc} renderListPal={renderListPal} renderEventPal={renderEventPal} renderGames={renderGames} />}
+            {location === "home" && <HomePageButtons renderBudgetPal={renderBudgetPal} renderTipCalc={renderTipCalc} renderListPal={renderListPal} renderMusicPal={renderMusicPal} renderGames={renderGames} />}
             {location === "budget" && <Budget />}
             {location === "tip" && <TipCalculator />}
             {location === "list" && <ListProvider><ListPal /></ListProvider>}
-            {location === "event" && <EventPal />}
+            {location === "music" && <MusicPal />}
             {location === "game" && <Games />}
             
         </div>
