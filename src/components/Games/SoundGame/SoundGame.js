@@ -18,13 +18,20 @@ const SoundGame = props =>{
     const [playHomies] = useSound(homiesMP3);
     const [playDroplet] = useSound(dropletMP3);
 
+    const backButtonHandler = () => {
+        props.goHome();
+    }
+
     return (
-        <div className={styles["sound-game"]}> 
-            <Button onClick={playSpooky} buttonName="Spooky" />
-            <Button onClick={playWoosh} buttonName="Woosh" />
-            <Button onClick={playHomies} buttonName="Homies" />
-            <Button onClick={playDroplet} buttonName="Droplet" />
-        </div>
+        <React.Fragment>
+            <button className={styles["back-button"]} onClick={backButtonHandler}>back</button>
+            <div className={styles["sound-game"]}> 
+                <Button onClick={playSpooky} buttonName="Spooky" />
+                <Button onClick={playWoosh} buttonName="Woosh" />
+                <Button onClick={playHomies} buttonName="Homies" />
+                <Button onClick={playDroplet} buttonName="Droplet" />
+            </div>
+        </React.Fragment>
     )
 }
 
