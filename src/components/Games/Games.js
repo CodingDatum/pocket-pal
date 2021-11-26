@@ -5,18 +5,16 @@ import SoundGame from './SoundGame/SoundGame';
 
 const Games = props => {
     
-    const [gameHomeScreen, setGameHomeScreen] = useState(true);
-    const [soundGame, setSoundGame] = useState(false)
+    const [gameLocation, setGameLocation ] = useState("games");
 
     const activateSoundGameHandler = (statement) => {
-        setSoundGame(true);
-        setGameHomeScreen(false);
+        setGameLocation("sound effects")
     }
     return(
 
         <div className={styles["games-container"]}>
-            {gameHomeScreen && <GameButtons setActiveSoundGame={activateSoundGameHandler} />}
-            {soundGame && <SoundGame />}
+            {gameLocation === "games" && <GameButtons setActiveSoundGame={activateSoundGameHandler} />}
+            {gameLocation === "sound effects" && <SoundGame />}
         </div>
             
     )
