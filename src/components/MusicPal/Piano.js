@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './Piano.module.css';
 
 const Piano = props => {
+
     return (
         <div className={styles.piano}>
             <div className={styles["key-container"]}>
