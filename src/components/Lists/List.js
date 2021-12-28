@@ -59,7 +59,7 @@ const List = props => {
                 {listIsActive && <ul>{listItems}
                     <li><button onClick={submitItemToList}>+</button><input type="text" onChange={listItemHandler} value={workingListItem}></input></li></ul>}
             </div>
-        </div>}
+            </div>}
         </React.Fragment>
     )
 }
