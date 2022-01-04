@@ -17,7 +17,7 @@ const ListItem = props => {
     return (
         <React.Fragment>
             {isChecked && <li className={styles.checked} onClick={listItemClickHandler}>{props.item}</li>}
-            {!isChecked && <li onClick={listItemClickHandler}>{props.item}</li>}
+            {!isChecked && <li className={styles.normal} onClick={listItemClickHandler}>{props.item}</li>}
         </React.Fragment>
     )
 
