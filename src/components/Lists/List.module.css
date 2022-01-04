@@ -44,5 +44,12 @@
 }
 
 .flipped {
-	transform: rotate(180deg);
+	transform: rotate(0deg);
+	animation: flipped 0.5s ease forwards;
+}
+
+@keyframes flipped {
+	to {
+		transform: rotate(180deg);
+	}
 }
