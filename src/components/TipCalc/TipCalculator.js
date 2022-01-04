@@ -28,7 +28,6 @@ const TipCalculator = props => {
     }
 
     const dotHandler = () => {
-
         let updatedBillAmount = billAmount + '';
         updatedBillAmount = updatedBillAmount + ".";
         setBillAmount(updatedBillAmount)
@@ -36,10 +35,11 @@ const TipCalculator = props => {
 
     const increaseTipHandler = () => {
         if(activeBill){
-            setGoingUp(true)
-            setTipAmount(tipAmount+1)
+            let newTip = tipAmount + 1
+            setTipAmount(newTip)
             setDontBeADick(false)
             calculateTipHandler()
+            setGoingUp(true)
         }
     }
 
@@ -49,10 +49,10 @@ const TipCalculator = props => {
             if(tipAmount === 15){
                 setDontBeADick(true)
             }else{
-                setGoingUp(false)
-                setTipAmount(tipAmount-1)
+                let newTip = tipAmount -1
+                setTipAmount(newTip)
                 calculateTipHandler()
-                
+                setGoingUp(false)
             }
         }
     }
@@ -60,9 +60,11 @@ const TipCalculator = props => {
     const calculateTipHandler = () => {
         let adjustedBill = +billAmount;
         let adjustedTip = tipAmount;
-        adjustedTip += 1;
+        if(goingUp){
+            adjustedTip += 1;
+        }
         if(!goingUp){
-            adjustedTip -= 2;
+            adjustedTip -= 1;
         }
         adjustedTip = "." + adjustedTip;
         console.log(adjustedBill)
