@@ -7,10 +7,10 @@ const ListProvider = props => {
 
     const originalList = [{
             listName: "Welcome to List Pal!",
-            listItems: ["Make a List!", "Make A List of Lists!!!"]
+            listItems: ["Make a grocery List!", "Make A To-do List!"]
         },{
-            listName: "press arrow to view list -->",
-            listItems: ["Press it again to close the tab", "Press the X Button on the left of the list Title to remove this list"]
+            listName: "Press here to view list -->",
+            listItems: ["Press it again to close the tab", "Press the X Button on the left of the list Title to remove this list", "Click the list Item to cross it out, or uncross it"]
         }]
 
     const [lists, setLists] = useState(() => {

@@ -56,7 +56,8 @@ const List = props => {
             <div className={styles.heading}>
                 <span onClick={removeListHandler}>X</span>
                 <h4>{props.name}</h4>
-                <span onClick={renderThisList}>⬇</span>
+                {listIsActive && <span className={styles.flipped} onClick={renderThisList}>⬇</span>}
+                {!listIsActive && <span onClick={renderThisList}>⬇</span>}
             </div>
             <div className={styles["list-container"]}>
                 {listIsActive && <ul>{listItems}

@@ -42,3 +42,7 @@
 	margin-right: 1rem;
 	border: none;
 }
+
+.flipped {
+	transform: rotate(180deg);
+}
