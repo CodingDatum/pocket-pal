@@ -1,6 +1,9 @@
 import React, { useContext, useState } from 'react';
 import styles from './List.module.css'
+
 import ListContext from './ListContext';
+
+import ListItem from './ListItem';
 
 const List = props => {
 
@@ -12,7 +15,7 @@ const List = props => {
 
     const listItems = props.listItems.map(item => {
         return (
-            <li key={Math.random()}>{item}</li>
+            <ListItem key={Math.random()} item={item}/>
         )
     })
 
