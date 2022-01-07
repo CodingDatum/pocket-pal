@@ -62,10 +62,12 @@ const Budget = props => {
 
     return (
         <div className={styles.budget}>
-            <h2>Budget Pal</h2>
+            <div className={styles["budget-header"]}>
+                ${progress}/${goal}
+            </div>
             <div className={styles["budget-container"]}>
                 <div className={styles["budget-buttons"]}>
-                    <Button onClick={addMoneyHandler} buttonName="Add $" />
+                    <Button onClick={addMoneyHandler} buttonName="Add Money" />
                     <Button onClick={setGoalHandler} buttonName="New Goal"/>
                     <Button onClick={refreshGoalHandler} buttonName="Refresh"/>
                 </div>
@@ -74,9 +76,6 @@ const Budget = props => {
                         <div className={styles["tracker-inside"]} style={{height: newBar}}></div>
                     </div>
                 </div>
-            </div>
-            <div className={styles["budget-footer"]}>
-                ${progress}/${goal}
             </div>
             {isAddingMoney && <NumPad submitButton={updateGoalHandler} />}
             {isAddingTotal && <NumPad submitButton={changeGoal} />}

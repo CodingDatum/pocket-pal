@@ -2,11 +2,13 @@
 	padding: 0.25rem 0.25rem;
 	color: rgb(226, 236, 248);
 	background-color: rgba(226, 236, 248, 0.25);
+	backdrop-filter: blur(5px);
 	border-radius: 5px;
 	border: 2px solid rgb(226, 236, 248);
 	width: 4.5rem;
 	font-size: 1rem;
 	text-align: center;
+	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
 .btn:active {
