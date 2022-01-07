@@ -7,7 +7,7 @@ const Button = props => {
 
     return(
         <div className={styles.btn} key={Math.random()} onClick={props.onClick}>
-            {buttonImage && <div>{buttonImage}</div>}
+            {buttonImage && <div className={styles["button-image"]}>{buttonImage}</div>}
             <div>{props.buttonName}</div>
         </div>
     )
