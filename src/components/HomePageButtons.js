@@ -4,13 +4,15 @@ import styles from './HomePageButtons.module.css';
 
 const HomePageButtons = props => {
     return(
-        <ul className={styles["home-page"]}>
-            <li><Button buttonName='Budget Pal' onClick={props.renderBudgetPal} /></li>
-            <li><Button buttonName="Tip Calc" onClick={props.renderTipCalc} /></li>
-            <li><Button buttonName="List Pal" onClick={props.renderListPal} /></li>
-            <li><Button buttonName="Music Pal" onClick={props.renderMusicPal} /></li>
-            <li><Button buttonName="Games" onClick={props.renderGames} /></li>
-        </ul>
+        <div className={styles["home-page"]}>
+
+            <Button buttonImage="💵" buttonName='Budget' onClick={props.renderBudgetPal} />
+            <Button buttonImage="🧮" buttonName="Tip Calc" onClick={props.renderTipCalc} />
+            <Button buttonImage="📄" buttonName="List Pal" onClick={props.renderListPal} />
+            <Button buttonImage="🎹" buttonName="Music" onClick={props.renderMusicPal} />
+            <Button buttonImage="🎭" buttonName="Games" onClick={props.renderGames} />
+
+        </div>
     )
 }
 

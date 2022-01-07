@@ -2,8 +2,14 @@ import React from 'react';
 import styles from './Button.module.css';
 
 const Button = props => {
+
+    const buttonImage = props.buttonImage;
+
     return(
-        <button className={styles.btn} key={Math.random()} onClick={props.onClick}>{props.buttonName}</button>
+        <div className={styles.btn} key={Math.random()} onClick={props.onClick}>
+            {buttonImage && <div>{buttonImage}</div>}
+            <div>{props.buttonName}</div>
+        </div>
     )
 }
 

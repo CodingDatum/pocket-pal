@@ -1,11 +1,12 @@
 .btn {
-	padding: 0.65rem 1.15rem;
-	color: #e2ecf8;
-	background-color: rgb(92, 6, 133);
+	padding: 0.25rem 0.25rem;
+	color: rgb(226, 236, 248);
+	background-color: rgba(226, 236, 248, 0.25);
 	border-radius: 5px;
-	border: 1px solid rgb(92, 6, 133);
-	width: 36vw;
-	font-size: 1.1rem;
+	border: 2px solid rgb(226, 236, 248);
+	width: 4.5rem;
+	font-size: 1rem;
+	text-align: center;
 }
 
 .btn:active {
