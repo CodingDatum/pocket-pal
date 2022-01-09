@@ -16,6 +16,9 @@
 .tip-calculator span {
 	color: #e2ecf8;
 	font-size: 1.6rem;
+	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	text-align: center;
 }
 
 .tip-nums {
