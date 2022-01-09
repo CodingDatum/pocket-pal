@@ -5,6 +5,8 @@
 	border: 5px solid rgb(92, 6, 133);
 	transform: translateX(-100%);
 	animation: animate 0.3s ease forwards;
+	background: url("https://images.unsplash.com/photo-1501436513145-30f24e19fcc8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1888&q=80");
+	background-size: cover;
 }
 
 @keyframes animate {
@@ -34,4 +36,14 @@
 .add-list-container input::placeholder {
 	color: #5283ac;
 	font-weight: bold;
+}
+
+.button {
+	color: rgb(92, 6, 133);
+	padding: 0.65rem;
+	background-color: #e2ecf8;
+	border: 2.5px solid rgb(92, 6, 133);
+	font-weight: bold;
+	border-radius: 5px;
+	box-shadow: 2px 2px 20px -5px black;
 }
