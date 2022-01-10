@@ -1,6 +1,5 @@
 import React, { useContext , useState } from 'react';
 import styles from './ListPal.module.css';
-import Button from '../UI/Button';
 import ListContext from './ListContext';
 import List from './List';
 
