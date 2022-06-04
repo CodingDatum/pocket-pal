@@ -8,7 +8,7 @@ const Games = props => {
     const [gameLocation, setGameLocation ] = useState("games");
 
     const activateSoundGameHandler = (statement) => {
-        setGameLocation("sound effects")
+        setGameLocation(statement)
     }
 
     const goHomeHandler = () => {
@@ -20,6 +20,7 @@ const Games = props => {
         <div className={styles["games-container"]}>
             {gameLocation === "games" && <GameButtons setActiveSoundGame={activateSoundGameHandler} />}
             {gameLocation === "sound effects" && <SoundGame goHome={goHomeHandler} />}
+        
         </div>
             
     )

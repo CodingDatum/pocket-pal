@@ -1,5 +1,5 @@
 .tip-calculator {
-	background: url("https://media.istockphoto.com/photos/science-math-chemistry-equations-picture-id953006834");
+	background: url("https://images.unsplash.com/photo-1583227061267-8428fb76fbfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=413&q=80");
 	background-size: cover;
 	background-position-x: 20%;
 	display: flex;
@@ -8,7 +8,7 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
-	border: 5px solid black;
+	border: 5px solid rgb(92, 6, 133);
 	transform: translateX(-100%);
 	animation: animate-budget 0.3s ease-in-out forwards;
 }
