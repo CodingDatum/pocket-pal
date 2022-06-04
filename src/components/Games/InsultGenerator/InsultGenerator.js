@@ -3,6 +3,7 @@ import styles from './InsultGenerator.module.css';
 
 const listOne = ["Fuck-", "Cunt-", "Shit-", "Ass-", "Pussy-", "Bitch-", "Clit-", "Dick-", "Fart-", "Queef-", "Slut-"];
 const listTwo = ["face", "stick", "head", "licker", "bag", "hole", "bandit", "pipe", "breath"];
+const listThree = ["Slithering", "Ratchet", "Putrid", "Decrepid", "Meager", "Slimey", "Unrelenting", "Ruthless", "Insepid"]
 
 const InsultGenerator = () => {
 
@@ -11,9 +12,11 @@ const InsultGenerator = () => {
     const insultGeneratorHandler = () => {
         const randomNumberOne = Math.floor(Math.random() * listOne.length);
         const randomNumberTwo = Math.floor(Math.random() * listTwo.length);
+        const randomNumberThree = Math.floor(Math.random() * listThree.length);
         const firstWord = listOne[randomNumberOne];
         const secondWord = listTwo[randomNumberTwo];
-        const finalInsult = firstWord + secondWord;
+        const thirdWord = listThree[randomNumberThree];
+        const finalInsult = thirdWord + " " + firstWord + secondWord;
         setInsult(finalInsult);
     }
 
