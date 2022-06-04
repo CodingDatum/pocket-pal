@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import styles from './InsultGenerator.module.css';
 
 const listOne = ["Fuck-", "Cunt-", "Shit-", "Ass-", "Pussy-", "Bitch-", "Clit-", "Dick-", "Fart-", "Queef-", "Slut-"];
-const listTwo = ["face", "stick", "head", "licker", "bag", "hole", "bandit", "pipe", "breath"];
-const listThree = ["Slithering", "Ratchet", "Putrid", "Decrepid", "Meager", "Slimey", "Unrelenting", "Ruthless", "Insepid", "Festering"]
+const listTwo = ["face", "stick", "head", "licker", "bag", "hole", "bandit", "pipe", "breath", "troll"];
+const listThree = ["Slithering", "Ratchet", "Putrid", "Decrepid", "Scaggy", "Slimey", "Unrelenting", "Ruthless", "Insepid", "Festering"]
 
 const InsultGenerator = () => {
 
