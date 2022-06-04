@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react';
+import styles from './InsultGenerator.module.css';
 
 const InsultGenerator = () => {
+
+    const insult = useState("Click the button for a random insult");
+
     return (
-        <div>testing insult generator</div>
+        <div className={styles["insult-generator__container"]}>
+            <span>{insult}</span>
+            <button>Button</button>
+        </div>
     )
 }
 
