@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import NavBar from './components/Nav/NavBar';
 import NavCol from './components/Nav/NavCol';
 import HomePage from './components/HomePage.js';
+import styles from './App.module.css';
+
+
 
 function App() {
 
@@ -26,11 +29,11 @@ function App() {
   }
 
   return (
-    <React.Fragment>
+    <div className={styles.app}>
       {navColumnActive && <NavCol goHome={goHome}/>}
       <NavBar hamburgerClickHandler={hamburgerClickHandler} navColIsOpen={navColumnActive}/>
       <HomePage home={home} goAway={goAway} />
-    </React.Fragment>
+    </div>
   );
 }
 

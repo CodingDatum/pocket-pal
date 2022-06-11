@@ -1,4 +1,5 @@
 .home {
-	height: 90vh;
-	width: 100vw;
+	height: 100%;
+	width: 100%;
+	background-color: rgb(26, 49, 49);
 }

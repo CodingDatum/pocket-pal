@@ -1,7 +1,6 @@
 .games-container {
-	border: 5px solid rgb(92, 6, 133);
 	height: 90vh;
-	position: absolute;
+	position: relative;
 	width: 100%;
 	transform: translateX(-100%);
 	animation: games 0.3s ease-out forwards;
