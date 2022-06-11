@@ -2,11 +2,12 @@
     height: 90vh;
     width: 100%;
     padding: 4rem 0rem 9rem 0rem;
-    background-color: rgb(26, 49, 49);
+    background-color: rgba(26, 49, 49, 0.2);
+	backdrop-filter: blur(50px);
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 

@@ -1,4 +1,8 @@
 .nav-bar {
+	position: absolute;
+	left: 5px;
+	right: 5px;
+	top: 5px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -20,6 +24,7 @@
 
 .nav-bar h1 {
 	font-size: 2rem;
+	text-shadow: 1px 1px 1px  rgb(26, 49, 49);
 }
 
 .hamburger-container {

@@ -6,6 +6,8 @@
 	height: 100%;
 	transform: translateX(100%);
 	animation: sound-game 0.5s ease forwards;
+	background-color: rgba(26, 49, 49, 0.2);
+	backdrop-filter: blur(50px);
 }
 
 .back-button {

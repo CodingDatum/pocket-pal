@@ -2,7 +2,8 @@
 	height: 100%;
 	width: 100%;
 	animation: home-page 0.5s ease-in-out forwards;
-	background-color: rgb(26, 49, 49);
+	background-color: rgba(26, 49, 49, 0.2);
+	backdrop-filter: blur(50px);
 	overflow: hidden;
 }
 
