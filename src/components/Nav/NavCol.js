@@ -11,6 +11,7 @@ const NavCol = props => {
                 <li>Contact</li>
             </ul>
             <div>&#169;</div>
+            
         </div>
     )
 }
