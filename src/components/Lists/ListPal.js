@@ -25,7 +25,7 @@ const ListPal = props => {
     }
 
     const addNewListHandler = () => {
-        ctx.addToList(listTitle);
+        ctx.addList(listTitle);
         setListTitle("")
     }
 

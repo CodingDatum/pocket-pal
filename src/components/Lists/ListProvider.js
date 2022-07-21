@@ -24,7 +24,7 @@ const ListProvider = props => {
         localStorage.setItem("lists", listAsString)
     },[lists])
 
-    const addToList = listObject => {
+    const addList = listObject => {
         let newList = {
             listName: listObject,
             listItems: []
@@ -48,7 +48,7 @@ const ListProvider = props => {
         localStorage.setItem("lists", JSON.stringify(lists))
     }
 
-    const deleteItem = (listName) => {
+    const deleteList = (listName) => {
         let newList = lists.filter(listObject => listObject.listName !== listName);
         setLists(newList);
         localStorage.setItem("lists", JSON.stringify(newList))
@@ -57,9 +57,9 @@ const ListProvider = props => {
 
     const listContext = {
         lists: lists,
-        addToList: addToList,
+        addList: addList,
         addItemToList: addItemToList,
-        deleteItem: deleteItem
+        deleteList: deleteList
     }
 
     return <ListContext.Provider value={listContext}>{props.children}</ListContext.Provider>

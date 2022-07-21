@@ -47,7 +47,7 @@ const List = props => {
     }
 
     const removeListHandler = () => {
-        ctx.deleteItem(props.name)
+        ctx.deleteList(props.name)
     }
 
     return (
