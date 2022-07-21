@@ -28,6 +28,7 @@
 	box-shadow: 2px 2px 20px -5px black;
 	position: absolute;
 	right: -30px;
-	top: 15%;
+	top: 50%;
+	transform: translateY(-50%);
 	z-index: 100;
 }
