@@ -11,13 +11,9 @@ const ListPal = props => {
 
     const lists = ctx.lists;
 
-    const listItemDeleteHandler = (listItem, listName) => {
-        ctx.deleteItemFromList(listItem, listName);
-    }
-
     const listsRenderable = lists.map(list => {
         return (
-            <List name={list.listName} listItems={list.listItems} listItemDeleteHandler={listItemDeleteHandler} key={Math.random()} />
+            <List name={list.listName} listItems={list.listItems} key={Math.random()} />
         );
     })
 
