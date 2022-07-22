@@ -55,11 +55,29 @@ const ListProvider = props => {
         console.log(lists)
     }
 
+    const deleteItemFromList = (itemName, listName) => {
+
+        let dummyLists = lists;
+        let properListObject = dummyLists.filter(listObject => listObject.listName === listName);
+        console.log(properListObject);
+        let newList = properListObject[0].listItems.filter(listItemName => listItemName !== itemName );
+        console.log(newList)
+        for (let i = 0 ; i < dummyLists.length ; i++){
+            if(dummyLists[i].listName === listName){
+                dummyLists[i].listItems=newList
+            }
+        }
+
+        setLists(dummyLists)
+        localStorage.setItem("lists", JSON.stringify(lists))
+    }
+
     const listContext = {
         lists: lists,
         addList: addList,
         addItemToList: addItemToList,
-        deleteList: deleteList
+        deleteList: deleteList,
+        deleteItemFromList: deleteItemFromList
     }
 
     return <ListContext.Provider value={listContext}>{props.children}</ListContext.Provider>

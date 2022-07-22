@@ -4,7 +4,7 @@ import styles from './ListItem.module.css';
 
 const ListItem = props => {
 
-    const [isChecked, setIsChecked] = useState(false)
+    const [isChecked, setIsChecked] = useState(false);
 
     const listItemClickHandler = () => {
         if(!isChecked){
@@ -15,9 +15,7 @@ const ListItem = props => {
     }
 
     const listItemDeleteHandler = () => {
-
-        
-
+        props.listItemDeleteHandler(props.item, props.listName)
     }
 
     return (
