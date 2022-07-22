@@ -13,14 +13,9 @@ const List = props => {
 
     const ctx = useContext(ListContext)
 
-    const listItemDeleteHandler = (listItem, listName) => {
-        ctx.deleteItemFromList(listItem, listName);
-        refreshHandler();
-    }
-
     const listItems = props.listItems.map(item => {
         return (
-            <ListItem key={Math.random()} item={item} listName={props.name} listItemDeleteHandler={listItemDeleteHandler}/>
+            <ListItem key={Math.random()} item={item} listName={props.name} listItemDeleteHandler={props.listItemDeleteHandler}/>
         )
     })
 

@@ -57,6 +57,8 @@ const ListProvider = props => {
 
     const deleteItemFromList = (itemName, listName) => {
 
+        let indexCounterBig
+        let indexCounterLittle
         let dummyLists = lists;
         let properListObject = dummyLists.filter(listObject => listObject.listName === listName);
         console.log(properListObject);
@@ -64,10 +66,17 @@ const ListProvider = props => {
         console.log(newList)
         for (let i = 0 ; i < dummyLists.length ; i++){
             if(dummyLists[i].listName === listName){
-                dummyLists[i].listItems=newList
+                indexCounterBig = i;
+                for(let j = 0 ; j < dummyLists[i].listItems.length ; j++){
+                    if(dummyLists[i].listItems[j] === itemName){
+                        indexCounterLittle = j;
+                    }
+                }
             }
         }
 
+        dummyLists[indexCounterBig].listItems.splice(indexCounterLittle, 1)
+        console.log(dummyLists)
         setLists(dummyLists)
         localStorage.setItem("lists", JSON.stringify(lists))
     }
