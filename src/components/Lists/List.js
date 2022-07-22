@@ -58,16 +58,16 @@ const List = props => {
     return (
         <React.Fragment>
             {refresh && <div className={styles.container}>
-            <div className={styles.heading}>
-                <span onClick={removeListHandler}>X</span>
-                <h4>{props.name}</h4>
-                {listIsActive && <span className={styles.flipped} onClick={renderThisList}>⬇</span>}
-                {!listIsActive && <span onClick={renderThisList}>⬇</span>}
-            </div>
-            <div className={styles["list-container"]}>
-                {listIsActive && <ul>{listItems}
-                    <li><button onClick={submitItemToList}>+</button><input type="text" onChange={listItemHandler} value={workingListItem}></input></li></ul>}
-            </div>
+                <div className={styles.heading}>
+                    <span onClick={removeListHandler}>X</span>
+                    <h4>{props.name}</h4>
+                    {listIsActive && <span className={styles.flipped} onClick={renderThisList}>⬇</span>}
+                    {!listIsActive && <span onClick={renderThisList}>⬇</span>}
+                </div>
+                <div className={styles["list-container"]}>
+                    {listIsActive && <ul>{listItems}
+                        <li><button onClick={submitItemToList}>+</button><input type="text" onChange={listItemHandler} value={workingListItem}></input></li></ul>}
+                </div>
             </div>}
         </React.Fragment>
     )

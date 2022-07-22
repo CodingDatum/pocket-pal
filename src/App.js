@@ -4,8 +4,6 @@ import NavCol from './components/Nav/NavCol';
 import HomePage from './components/HomePage.js';
 import styles from './App.module.css';
 
-
-
 function App() {
 
   const [navColumnActive, setNavColumnActive] = useState(false);
