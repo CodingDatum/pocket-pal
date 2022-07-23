@@ -36,6 +36,13 @@ const ContactContent = props => {
             <button onClick={sendEmailHandler}>Send App</button>
             <p>Would you like a custom app of your own? Would you like to learn how to code? feel free to reach out to me at codingdatum@gmail.com</p>
             <button onClick={props.contactCloseHandler}>close</button>
+            <div className={styles.social}>
+                <span>FB</span>
+                <span>TW</span>
+                <span>IG</span>
+                <span>GH</span>
+                <span>WS</span>
+            </div>
         </div>
     )
 }
