@@ -9,7 +9,7 @@
     padding: 1rem;
     background-color: rgb(23, 40, 40);
     color: white;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
     z-index: 500;
     display: flex;
@@ -18,10 +18,24 @@
     align-items: center;
 }
 
+.contact h2{
+    font-size: 50px;
+}
+
 .contact p{
     line-height: 25px;
     letter-spacing: 3px;
 }
 .contact button{
     padding: 1rem 1rem;
+    font-weight: 800;
+    font-size: 20px;
+    color: rgb(23, 40, 40);
+    background-color: white;
+}
+
+.contact input{
+    border: none;
+    height: 40px;
+    width: 80%;
 }

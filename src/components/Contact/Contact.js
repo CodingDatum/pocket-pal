@@ -19,7 +19,7 @@ const ContactContent = props => {
 
     return(
         <div className={styles.contact}>
-            <h1>Contact Me</h1>
+            <h2>Contact</h2>
             <p>Enter your email and I'll send you this app:</p>
             <input type="text" onChange={inputHandler}></input>
             <button onClick={sendEmailHandler}>Send App</button>
