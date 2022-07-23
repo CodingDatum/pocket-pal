@@ -10,7 +10,14 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    transition: 1s ease all;
+    transform: translateY(100%);
+    animation: animate 0.6s ease forwards;
+}
+
+@keyframes animate {
+    to{
+        transform: translateY(0%);
+    }
 }
 
 .container input{
