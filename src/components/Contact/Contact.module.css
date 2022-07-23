@@ -55,4 +55,12 @@
 .social{
     display: flex;
     color: white;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact img{
+    height: 2rem;
+    width: 2rem;
 }

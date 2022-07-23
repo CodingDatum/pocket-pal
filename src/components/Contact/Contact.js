@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import ReactDom from 'react-dom';
 import ContactInput from './ContactInput';
+import IconModal from './IconModal';
 import styles from "./Contact.module.css"
 
 const webAddress = "https://codingdatum.github.io/pocket-pal/";
@@ -8,7 +9,10 @@ const webAddress = "https://codingdatum.github.io/pocket-pal/";
 const ContactContent = props => {
 
     const [email, setEmail] = useState("");
-    const[inputActive, setInputActive] = useState(false)
+    const[inputActive, setInputActive] = useState(false);
+    const [iconModal, setIconModal] = useState(false);
+    const [touchCount, setTouchCount] = useState(0);
+    const [modalContent, setModalContent] = useState ("These Icons are currently disabled")
 
     const sendEmailHandler = () => {
         window.open('mailto:' + email +'?subject="PocketPal"&body=' + webAddress);
@@ -27,6 +31,18 @@ const ContactContent = props => {
         deactivateInputHandler()
     }
 
+    const openModalHandler = () => {
+        if(touchCount > 2){
+            setModalContent("Can you read!?")
+        }
+        setIconModal(true);
+    }
+
+    const closeModalHandler = () => {
+        setIconModal(false);
+        setTouchCount(touchCount + 1);
+    }
+
     return(
         <div className={styles.contact}>
             <h2>Contact</h2>
@@ -37,12 +53,13 @@ const ContactContent = props => {
             <p>Would you like a custom app of your own? Would you like to learn how to code? feel free to reach out to me at codingdatum@gmail.com</p>
             <button onClick={props.contactCloseHandler}>close</button>
             <div className={styles.social}>
-                <span>FB</span>
-                <span>TW</span>
-                <span>IG</span>
-                <span>GH</span>
-                <span>WS</span>
+                <img onClick={openModalHandler} src="https://cdn-icons.flaticon.com/png/512/4494/premium/4494475.png?token=exp=1658602002~hmac=389d1d9451b4f64bfbdd8124b0fa6909" alt="Facebook Logo"></img>
+                <img onClick={openModalHandler} src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="instagram logo"></img>
+                <img onClick={openModalHandler} src="https://cdn-icons.flaticon.com/png/512/4494/premium/4494477.png?token=exp=1658602002~hmac=f5a6f5cb16416a63207175743fb16be4" alt="twitter logo"></img>
+                <img onClick={openModalHandler} src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="youtube logo" />
+                <img onClick={openModalHandler} src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="github logo" />
             </div>
+            {iconModal && <IconModal phrase={modalContent} closeModal={closeModalHandler} />}
         </div>
     )
 }
