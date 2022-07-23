@@ -7,8 +7,8 @@ const AboutContent = props => {
         <div className={styles.about}>
             <h2>About</h2>
             <p>Hi, I'm Matt, and I like to make web apps! What I lack in professional experience and formal schooling, I make up for in curiosity, creativity, and passion.</p>
-            <p>I mostly make stuff for myself, family, and friends, but would love to collaborate with any interested parties.</p>
-            <p>For any fellow developers, I mostly use React.js, and have a basic grasp of / experience with the MERN stack. I would love a study-buddy, or even someone that wants to get into coding and needs help.</p>
+            <p>I enjoy making stuff for myself, family, and friends, but would love to collaborate with any interested parties.</p>
+            <p>For any fellow developers, this app is where I practice my React.js skills. I would love a study-buddy, a project partner, or even someone that wants to get into coding and needs help.</p>
             <button onClick={props.aboutCloseHandler}>close</button>
         </div>
     )
