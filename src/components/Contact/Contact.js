@@ -53,9 +53,9 @@ const ContactContent = props => {
             <p>Would you like a custom app of your own? Would you like to learn how to code? feel free to reach out to me at codingdatum@gmail.com</p>
             <button onClick={props.contactCloseHandler}>close</button>
             <div className={styles.social}>
-                <img onClick={openModalHandler} src="https://cdn-icons.flaticon.com/png/512/4494/premium/4494475.png?token=exp=1658602002~hmac=389d1d9451b4f64bfbdd8124b0fa6909" alt="Facebook Logo"></img>
+                <img onClick={openModalHandler} src="https://cdn-icons.flaticon.com/png/512/4494/premium/4494479.png?token=exp=1658604331~hmac=aaa3e4689f22e8bcc0c41775b585758c" alt="Facebook Logo"></img>
                 <img onClick={openModalHandler} src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="instagram logo"></img>
-                <img onClick={openModalHandler} src="https://cdn-icons.flaticon.com/png/512/4494/premium/4494477.png?token=exp=1658602002~hmac=f5a6f5cb16416a63207175743fb16be4" alt="twitter logo"></img>
+                <img onClick={openModalHandler} src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="twitter logo"></img>
                 <img onClick={openModalHandler} src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="youtube logo" />
                 <img onClick={openModalHandler} src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="github logo" />
             </div>
