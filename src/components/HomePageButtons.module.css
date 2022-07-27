@@ -2,8 +2,7 @@
 	height: 100%;
 	width: 100%;
 	animation: home-page 0.5s ease-in-out forwards;
-	background-color: rgba(26, 49, 49, 0.2);
-	backdrop-filter: blur(50px);
+	background: linear-gradient(to bottom, rgb(33, 64, 64), rgb(23, 40, 40));
 	overflow: hidden;
 }
 

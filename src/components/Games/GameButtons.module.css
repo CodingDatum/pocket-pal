@@ -7,8 +7,7 @@
 	gap: 2rem;
 	padding-top: 90px;
 	padding-bottom: 90px;
-	background-color: rgba(26, 49, 49, 0.2);
-	backdrop-filter: blur(50px);
+	background: linear-gradient(to bottom, rgb(33, 64, 64), rgb(23, 40, 40));
 }
 
 .games button {
