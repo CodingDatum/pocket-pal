@@ -45,15 +45,15 @@ const ContactContent = props => {
 
     return(
         <div className={styles.contact}>
+            <button className={styles.close} onClick={props.contactCloseHandler}>x</button>
             <h2>Contact</h2>
             <p>Enter your email and I'll send you this app:</p>
             {!inputActive && <input type="text" className={styles["little-input"]} value={email} onClick={activateInputHandler}></input>}
             {inputActive && <ContactInput updateEmail={updateEmail} />}
-            <button onClick={sendEmailHandler}>Send App</button>
+            <button className={styles.send} onClick={sendEmailHandler}>Send App</button>
             <p>Would you like a custom app of your own? Would you like to learn how to code? feel free to reach out to me at codingdatum@gmail.com</p>
-            <button onClick={props.contactCloseHandler}>close</button>
             <div className={styles.social}>
-                <img onClick={openModalHandler} src="https://cdn-icons.flaticon.com/png/512/4494/premium/4494479.png?token=exp=1658604331~hmac=aaa3e4689f22e8bcc0c41775b585758c" alt="Facebook Logo"></img>
+                <img onClick={openModalHandler} src="https://png.pngtree.com/element_our/sm/20180509/sm_5af2ca6386091.jpg" alt="Facebook Logo"></img>
                 <img onClick={openModalHandler} src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="instagram logo"></img>
                 <img onClick={openModalHandler} src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="twitter logo"></img>
                 <img onClick={openModalHandler} src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="youtube logo" />

@@ -29,15 +29,20 @@
 }
 
 .about p{
-    line-height: 25px;
+    line-height: 30px;
     letter-spacing: 3px;
 }
-.about button{
-    padding: 1rem 1rem;
-    font-weight: 800;
-    font-size: 20px;
-    color: rgb(23, 40, 40);
-    background-color: white;
+.close{
+    position: absolute;
+    z-index: 550;
+    top:2rem;
+    right: 2rem;
+    border: 1px solid white;
+    background-color: rgb(23, 40, 40);
+    color: white;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
 
 .about h2{

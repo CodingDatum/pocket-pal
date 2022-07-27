@@ -8,14 +8,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    transform: translateY(100%);
-    animation: animate 0.6s ease forwards;
-}
-
-@keyframes animate {
-    to{
-        transform: translateY(0%);
-    }
 }
 
 .container input{
@@ -30,6 +22,8 @@
     padding: 1rem 1rem;
     font-weight: 800;
     font-size: 20px;
-    color: rgb(23, 40, 40);
-    background-color: white;
+    color: white;
+    background-color: rgb(23, 40, 40);
+    border: 1px solid white;
+    border-radius: 5px;
 }
