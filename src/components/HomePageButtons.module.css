@@ -2,7 +2,7 @@
 	height: 100%;
 	width: 100%;
 	animation: home-page 0.5s ease-in-out forwards;
-	background: linear-gradient(to bottom, rgb(33, 64, 64), rgb(23, 40, 40));
+	background-color: rgb(13, 14, 25);
 	overflow: hidden;
 }
 
