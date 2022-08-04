@@ -3,7 +3,7 @@
 	padding: 2rem;
 	height: 90vh;
 	transform: translateX(-100%);
-	animation: animate 0.3s ease forwards;
+	animation: animate 0.5s ease-in-out forwards;
 	background-color: rgb(13, 14, 25);
 }
 
@@ -15,7 +15,7 @@
 
 .list-pal h3 {
 	padding: 0.8rem;
-	color: rgb(92, 6, 133);
+	color: #e2ecf8;
 }
 
 .add-list-contaner {
@@ -27,20 +27,19 @@
 .add-list-container input {
 	padding: 10px;
 	width: 8rem;
-	margin-left: 10px;
-	border: 1px solid #5283ac;
+	margin-left: 30px;
 }
 
 .add-list-container input::placeholder {
-	color: #5283ac;
+	color: black;
 	font-weight: bold;
 }
 
 .button {
-	color: rgb(92, 6, 133);
+	color: #e2ecf8;;
 	padding: 0.65rem;
-	background-color: #e2ecf8;
-	border: 2.5px solid rgb(92, 6, 133);
+	background: none;
+	border: 2.5px solid #e2ecf8;
 	font-weight: bold;
 	border-radius: 5px;
 	box-shadow: 2px 2px 20px -5px black;
