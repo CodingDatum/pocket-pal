@@ -5,7 +5,7 @@ const listOne = ["Fuck-", "Cunt-", "Shit-", "Ass-", "Pussy-", "Bitch-", "Clit-",
 const listTwo = ["face", "stick", "head", "licker", "bag", "hole", "bandit", "pipe", "breath", "troll"];
 const listThree = ["Slithering", "Ratchet", "Putrid", "Decrepid", "Scaggy", "Slimey", "Unrelenting", "Ruthless", "Insepid", "Festering"]
 
-const InsultGenerator = () => {
+const InsultGenerator = props => {
 
     const [insult, setInsult] = useState("Click the button for a random insult");
 
@@ -20,11 +20,18 @@ const InsultGenerator = () => {
         setInsult(finalInsult);
     }
 
+    const backButtonHandler = () => {
+        props.goHome();
+    }
+
     return (
-        <div className={styles["insult-generator__container"]}>
-            <span>{insult}</span>
-            <button onClick={insultGeneratorHandler}>Button</button>
-        </div>
+        <React.Fragment>
+            <button className={styles["back-button"]} onClick={backButtonHandler}>back</button>
+            <div className={styles["insult-generator__container"]}>
+                <span>{insult}</span>
+                <button className={styles.button} onClick={insultGeneratorHandler}>Button</button>
+            </div>
+        </React.Fragment>
     )
 }
 

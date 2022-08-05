@@ -26,10 +26,10 @@ const SoundGame = props =>{
         <React.Fragment>
             <button className={styles["back-button"]} onClick={backButtonHandler}>back</button>
             <div className={styles["sound-game"]}> 
-                <Button onClick={playSpooky} buttonName="Spooky" />
-                <Button onClick={playWoosh} buttonName="Woosh" />
-                <Button onClick={playHomies} buttonName="Homies" />
-                <Button onClick={playDroplet} buttonName="Droplet" />
+                <Button onClick={playSpooky} buttonName="Spooky" buttonTwo={true} />
+                <Button onClick={playWoosh} buttonName="Woosh" buttonTwo={true} />
+                <Button onClick={playHomies} buttonName="Homies" buttonTwo={true} />
+                <Button onClick={playDroplet} buttonName="Droplet" buttonTwo={true} />
             </div>
         </React.Fragment>
     )

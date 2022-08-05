@@ -22,7 +22,7 @@ const GameButtons = props => {
                 <button>GAME</button>
                 <button>GAME</button>
                 <button>GAME</button>
-            </div>
+        </div>
     )
 };
 

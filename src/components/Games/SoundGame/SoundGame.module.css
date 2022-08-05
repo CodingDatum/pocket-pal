@@ -6,8 +6,7 @@
 	height: 100%;
 	transform: translateX(100%);
 	animation: sound-game 0.5s ease forwards;
-	background-color: rgba(26, 49, 49, 0.2);
-	backdrop-filter: blur(50px);
+	background-color: rgb(13, 14, 25);
 }
 
 .back-button {
@@ -15,8 +14,9 @@
 	top: 1rem;
 	left: 1rem;
 	padding: 0.5rem 0.3rem;
-	border: 2.5px solid #5283ac;
-	color: #5283ac;
+	border: 2px solid white;
+	color: #ffffff;
+	background-color: rgb(13, 14, 25);
 	font-weight: bold;
 	z-index: 10;
 	transform: translateX(-200%);

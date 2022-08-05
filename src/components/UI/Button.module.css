@@ -1,4 +1,4 @@
-.btn {
+.btn, .btntwo {
 	padding: 0.25rem 0.25rem;
 	color: rgb(226, 236, 248);
 	background-color: rgba(226, 236, 248, 0.25);
@@ -8,6 +8,19 @@
 	width: 4.5rem;
 	font-size: 1rem;
 	text-align: center;
+}
+
+.btntwo{
+	width: 5rem;
+	height: 3rem;
+	position: relative;
+}
+
+.btntwo-text{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
 }
 
 .btn:active {
