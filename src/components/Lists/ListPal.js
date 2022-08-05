@@ -34,7 +34,7 @@ const ListPal = props => {
             {addListInputActive && <ListInput buttonName="Add New List" addNewListHandler={addNewListHandler} />}
 
                 <div className={styles["add-list-container"]}>
-                    <button className={styles.button} onClick={openInputHandler}>Add List</button>
+                    <button className={styles.button} onClick={openInputHandler}>Add New List</button>
                 </div>
                 
                 <h3>My Lists:</h3>

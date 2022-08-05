@@ -40,7 +40,7 @@
 	color: #e2ecf8;
 	padding: 0.65rem;
 	border: 2.5px solid #e2ecf8;
-	font-weight: bold;
+	font-size: 1.25rem;
 	border-radius: 5px;
 	box-shadow: 2px 2px 20px -5px black;
 	background: linear-gradient( 135deg, rgb(0, 0, 0) 74%, rgba(255, 255, 255, 0.3) 80%, white 82%, rgba(255, 255, 255, 0.3) 84%, rgb(0, 0, 0) 90%);
