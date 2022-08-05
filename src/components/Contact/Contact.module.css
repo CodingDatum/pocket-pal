@@ -70,6 +70,7 @@
     padding: 0.4rem;
     font-size: 1.25rem;
     text-align: center;
+    transform: translateY(-20px);
 }
 
 .social{
