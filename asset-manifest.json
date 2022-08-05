@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/pocket-pal/static/css/main.f69160e8.chunk.css",
+    "main.css": "/pocket-pal/static/css/main.651a08a4.chunk.css",
     "main.js": "/pocket-pal/static/js/main.aee27963.chunk.js",
     "main.js.map": "/pocket-pal/static/js/main.aee27963.chunk.js.map",
     "runtime-main.js": "/pocket-pal/static/js/runtime-main.d9ab5785.js",
@@ -12,7 +12,7 @@
     "static/js/4.e1a07c1d.chunk.js": "/pocket-pal/static/js/4.e1a07c1d.chunk.js",
     "static/js/4.e1a07c1d.chunk.js.map": "/pocket-pal/static/js/4.e1a07c1d.chunk.js.map",
     "index.html": "/pocket-pal/index.html",
-    "static/css/main.f69160e8.chunk.css.map": "/pocket-pal/static/css/main.f69160e8.chunk.css.map",
+    "static/css/main.651a08a4.chunk.css.map": "/pocket-pal/static/css/main.651a08a4.chunk.css.map",
     "static/js/2.0f445ecb.chunk.js.LICENSE.txt": "/pocket-pal/static/js/2.0f445ecb.chunk.js.LICENSE.txt",
     "static/js/3.580f17ab.chunk.js.LICENSE.txt": "/pocket-pal/static/js/3.580f17ab.chunk.js.LICENSE.txt",
     "static/media/Droplet.22eea05d.mp3": "/pocket-pal/static/media/Droplet.22eea05d.mp3",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.d9ab5785.js",
     "static/js/2.0f445ecb.chunk.js",
-    "static/css/main.f69160e8.chunk.css",
+    "static/css/main.651a08a4.chunk.css",
     "static/js/main.aee27963.chunk.js"
   ]
 }
