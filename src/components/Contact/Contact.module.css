@@ -36,7 +36,7 @@
     line-height: 30px;
     letter-spacing: 3px;
 }
-.send{
+.send, .invalid{
     padding: 1rem 1rem;
     font-weight: 800;
     font-size: 20px;
@@ -48,6 +48,12 @@
     color: white;
     border-radius: 5px;
     text-shadow: 1px 1px 1px black;
+}
+
+.invalid{
+    border: 1px solid red;
+    background: none;
+    animation: none;
 }
 
 @keyframes bg-flash{
@@ -88,4 +94,27 @@
     font-size: 1.25rem;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+}
+
+.email-warning{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-150%) translateX(0);
+    opacity: 0;
+    animation: email-warning 2s ease forwards;
+    color: red;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 1px black;
+    width: 80%;
+    font-weight: 200;
+}
+
+@keyframes email-warning{
+    to{
+        opacity: 1;
+        left:50%;
+        top:50%;
+        transform: translateY(-150%) translateX(-50%);
+    }
 }

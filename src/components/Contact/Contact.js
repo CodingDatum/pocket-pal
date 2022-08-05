@@ -9,10 +9,12 @@ const webAddress = "https://codingdatum.github.io/pocket-pal/";
 const ContactContent = props => {
 
     const [email, setEmail] = useState("");
-    const[inputActive, setInputActive] = useState(false);
+    const [inputActive, setInputActive] = useState(false);
     const [iconModal, setIconModal] = useState(false);
     const [touchCount, setTouchCount] = useState(0);
-    const [modalContent, setModalContent] = useState ("These Icons are currently disabled")
+    const [modalContent, setModalContent] = useState ("These Icons are currently disabled");
+    const [emailIsValid, setEmailIsValid] = useState(false);
+    const [emailWarning, setEmailWarning] = useState(false);
 
     const sendEmailHandler = () => {
         window.open('mailto:' + email +'?subject="PocketPal"&body=' + webAddress);
@@ -22,17 +24,27 @@ const ContactContent = props => {
         setInputActive(true)
     }
 
-    const deactivateInputHandler = () => {
-        setInputActive(false)
-    }
-
     const updateEmail = (input) => {
         setEmail(input)
-        deactivateInputHandler()
+        setInputActive(false)
+        if(input.includes("@",".")){
+            setEmailIsValid(true)
+        }else{
+            activateEmailWarning()
+        }
+        
+    }
+
+    const activateEmailWarning = () => {
+        setEmail("Click here to try again")
+        setEmailWarning(true);
+        setTimeout(() => {
+            setEmailWarning(false)
+        }, 4500)
     }
 
     const openModalHandler = () => {
-        if(touchCount > 2){
+        if(touchCount >= 2){
             setModalContent("Can you read!?")
         }
         setIconModal(true);
@@ -49,12 +61,14 @@ const ContactContent = props => {
 
     return(
         <div className={styles.contact}>
+            {emailWarning && <span className={styles['email-warning']}>Please enter a valid email</span>}
             <button className={styles.close} onClick={props.contactCloseHandler}>x</button>
             <h2>Contact</h2>
             <p>Enter your email and I'll send you this app:</p>
             {!inputActive && <input type="text" className={styles["little-input"]} value={email} onChange={whyIsThisNeeded} onClick={activateInputHandler}></input>}
             {inputActive && <ContactInput updateEmail={updateEmail} />}
-            <button className={styles.send} onClick={sendEmailHandler}>Send App</button>
+            {emailIsValid && <button className={styles.send} onClick={sendEmailHandler}>Send App</button>}
+            {!emailIsValid && <button className={styles.invalid} onClick={null}>Send App</button>}
             <p>Would you like a custom app of your own? Would you like to learn how to code? feel free to reach out to me at codingdatum@gmail.com</p>
             <div className={styles.social}>
                 <img onClick={openModalHandler} src="https://png.pngtree.com/element_our/sm/20180509/sm_5af2ca6386091.jpg" alt="Facebook Logo"></img>
