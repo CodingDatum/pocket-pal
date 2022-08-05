@@ -1,0 +1,32 @@
+.input{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    left: 0%;
+    bottom: 0%;
+    background-color: rgb(13, 14, 25);
+    z-index: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.input input{
+    height: 3rem;
+    width: 80%;
+    background-color: white;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+}
+
+.input button{
+    background-color: white;
+    padding: 1rem 1.6rem;
+    background-color: rgb(13, 14, 25);
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+}

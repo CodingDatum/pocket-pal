@@ -2,10 +2,11 @@ import React, { useContext , useState } from 'react';
 import styles from './ListPal.module.css';
 import ListContext from './ListContext';
 import List from './List';
+import ListInput from './ListInput';
 
 const ListPal = props => {
 
-    const [listTitle, setListTitle] = useState("")
+    const [addListInputActive, setAddListInputActive] = useState(false);
 
     const ctx = useContext(ListContext);
 
@@ -17,25 +18,23 @@ const ListPal = props => {
         );
     })
 
-    // THESE HANDLE ADDING A NEW LIST BASED ON THE TITLE
-
-    const addListTitleHandler = (e) => {
-        let inputValue = e.target.value;
-        setListTitle(inputValue);
+    const addNewListHandler = (input) => {
+        ctx.addList(input);
+        setAddListInputActive(false)
     }
 
-    const addNewListHandler = () => {
-        ctx.addList(listTitle);
-        setListTitle("")
+    const openInputHandler = () => {
+        setAddListInputActive(true)
     }
 
     return(
         
             <div className={styles["list-pal"]}>
+            {addListInputActive && <ListInput buttonName="Add New List" addNewListHandler={addNewListHandler} />}
+            {addListInputActive && <ListInput buttonName="Add New List" addNewListHandler={addNewListHandler} />}
 
                 <div className={styles["add-list-container"]}>
-                    <button className={styles.button} onClick={addNewListHandler}>Add List</button>
-                    <input type="text" onChange={addListTitleHandler} value={listTitle}></input>
+                    <button className={styles.button} onClick={openInputHandler}>Add List</button>
                 </div>
                 
                 <h3>My Lists:</h3>
