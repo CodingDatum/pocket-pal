@@ -41,9 +41,19 @@
     font-weight: 800;
     font-size: 20px;
     border: 1px solid white;
-    background-color: rgb(23, 40, 40);
+    background: linear-gradient( 45deg, rgb(23, 40, 40) 74%, rgba(255, 255, 255, 0.3) 80%, white 82%, rgba(255, 255, 255, 0.3) 84%, rgb(23, 40, 40) 90%);
+    background-size: 1300%;
+	background-position:top left;
+	animation: bg-flash 4s linear alternate infinite;
     color: white;
     border-radius: 5px;
+    text-shadow: 1px 1px 1px black;
+}
+
+@keyframes bg-flash{
+	to{
+		background-position: bottom right;
+	}
 }
 
 .little-input{

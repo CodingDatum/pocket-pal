@@ -43,12 +43,16 @@ const ContactContent = props => {
         setTouchCount(touchCount + 1);
     }
 
+    const whyIsThisNeeded = () => {
+        return
+    }
+
     return(
         <div className={styles.contact}>
             <button className={styles.close} onClick={props.contactCloseHandler}>x</button>
             <h2>Contact</h2>
             <p>Enter your email and I'll send you this app:</p>
-            {!inputActive && <input type="text" className={styles["little-input"]} value={email} onClick={activateInputHandler}></input>}
+            {!inputActive && <input type="text" className={styles["little-input"]} value={email} onChange={whyIsThisNeeded} onClick={activateInputHandler}></input>}
             {inputActive && <ContactInput updateEmail={updateEmail} />}
             <button className={styles.send} onClick={sendEmailHandler}>Send App</button>
             <p>Would you like a custom app of your own? Would you like to learn how to code? feel free to reach out to me at codingdatum@gmail.com</p>
