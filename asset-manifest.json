@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/pocket-pal/static/css/main.1be9ca14.chunk.css",
-    "main.js": "/pocket-pal/static/js/main.fe5bb242.chunk.js",
-    "main.js.map": "/pocket-pal/static/js/main.fe5bb242.chunk.js.map",
-    "runtime-main.js": "/pocket-pal/static/js/runtime-main.cd1687fe.js",
-    "runtime-main.js.map": "/pocket-pal/static/js/runtime-main.cd1687fe.js.map",
-    "static/js/2.e771f039.chunk.js": "/pocket-pal/static/js/2.e771f039.chunk.js",
-    "static/js/2.e771f039.chunk.js.map": "/pocket-pal/static/js/2.e771f039.chunk.js.map",
-    "static/js/3.f344361d.chunk.js": "/pocket-pal/static/js/3.f344361d.chunk.js",
-    "static/js/3.f344361d.chunk.js.map": "/pocket-pal/static/js/3.f344361d.chunk.js.map",
-    "static/js/4.378953f6.chunk.js": "/pocket-pal/static/js/4.378953f6.chunk.js",
-    "static/js/4.378953f6.chunk.js.map": "/pocket-pal/static/js/4.378953f6.chunk.js.map",
+    "main.css": "/pocket-pal/static/css/main.710cd81e.chunk.css",
+    "main.js": "/pocket-pal/static/js/main.73a98cfc.chunk.js",
+    "main.js.map": "/pocket-pal/static/js/main.73a98cfc.chunk.js.map",
+    "runtime-main.js": "/pocket-pal/static/js/runtime-main.edfe6aa3.js",
+    "runtime-main.js.map": "/pocket-pal/static/js/runtime-main.edfe6aa3.js.map",
+    "static/js/2.9edbcf55.chunk.js": "/pocket-pal/static/js/2.9edbcf55.chunk.js",
+    "static/js/2.9edbcf55.chunk.js.map": "/pocket-pal/static/js/2.9edbcf55.chunk.js.map",
+    "static/js/3.602aef3e.chunk.js": "/pocket-pal/static/js/3.602aef3e.chunk.js",
+    "static/js/3.602aef3e.chunk.js.map": "/pocket-pal/static/js/3.602aef3e.chunk.js.map",
+    "static/js/4.6ff15a56.chunk.js": "/pocket-pal/static/js/4.6ff15a56.chunk.js",
+    "static/js/4.6ff15a56.chunk.js.map": "/pocket-pal/static/js/4.6ff15a56.chunk.js.map",
     "index.html": "/pocket-pal/index.html",
-    "static/css/main.1be9ca14.chunk.css.map": "/pocket-pal/static/css/main.1be9ca14.chunk.css.map",
-    "static/js/2.e771f039.chunk.js.LICENSE.txt": "/pocket-pal/static/js/2.e771f039.chunk.js.LICENSE.txt",
-    "static/js/3.f344361d.chunk.js.LICENSE.txt": "/pocket-pal/static/js/3.f344361d.chunk.js.LICENSE.txt",
+    "static/css/main.710cd81e.chunk.css.map": "/pocket-pal/static/css/main.710cd81e.chunk.css.map",
+    "static/js/2.9edbcf55.chunk.js.LICENSE.txt": "/pocket-pal/static/js/2.9edbcf55.chunk.js.LICENSE.txt",
+    "static/js/3.602aef3e.chunk.js.LICENSE.txt": "/pocket-pal/static/js/3.602aef3e.chunk.js.LICENSE.txt",
     "static/media/Droplet.22eea05d.mp3": "/pocket-pal/static/media/Droplet.22eea05d.mp3",
     "static/media/Homies.cd84c5e3.mp3": "/pocket-pal/static/media/Homies.cd84c5e3.mp3",
     "static/media/Woosh.64ba9d84.mp3": "/pocket-pal/static/media/Woosh.64ba9d84.mp3",
     "static/media/spooky.a6a30148.mp3": "/pocket-pal/static/media/spooky.a6a30148.mp3"
   },
   "entrypoints": [
-    "static/js/runtime-main.cd1687fe.js",
-    "static/js/2.e771f039.chunk.js",
-    "static/css/main.1be9ca14.chunk.css",
-    "static/js/main.fe5bb242.chunk.js"
+    "static/js/runtime-main.edfe6aa3.js",
+    "static/js/2.9edbcf55.chunk.js",
+    "static/css/main.710cd81e.chunk.css",
+    "static/js/main.73a98cfc.chunk.js"
   ]
 }
