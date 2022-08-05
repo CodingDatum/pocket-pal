@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 import styles from './About.module.css';
+import Backdrop from '../UI/Backdrop';
 
 const AboutContent = props => {
     return (
@@ -16,9 +16,7 @@ const AboutContent = props => {
 
 const About = props => {
     return (
-        <React.Fragment>
-            {ReactDom.createPortal(<AboutContent aboutCloseHandler={props.aboutCloseHandler} />, document.getElementById("about-root"))}
-        </React.Fragment>
+        <Backdrop><AboutContent aboutCloseHandler={props.aboutCloseHandler} /></Backdrop>
     )
 }
 export default About

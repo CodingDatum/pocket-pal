@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import ReactDom from 'react-dom';
 import ContactInput from './ContactInput';
 import IconModal from './IconModal';
 import styles from "./Contact.module.css"
+import Backdrop from '../UI/Backdrop';
 
 const webAddress = "https://codingdatum.github.io/pocket-pal/";
 
@@ -70,9 +70,7 @@ const ContactContent = props => {
 
 const Contact = props => {
     return (
-        <React.Fragment>
-        {ReactDom.createPortal(<ContactContent contactCloseHandler={props.contactCloseHandler} />, document.getElementById("contact-root"))}
-        </React.Fragment>
+        <Backdrop><ContactContent contactCloseHandler={props.contactCloseHandler} /></Backdrop>
     )
     
 }
