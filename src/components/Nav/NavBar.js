@@ -1,11 +1,10 @@
-import React from "react";
+import React , { useContext } from "react";
 import styles from './NavBar.module.css';
-
-// class name dynamically requires us to handle the logic ahead of time, not in the html tag
+import TitleContext from "../Systems/TitleContext";
 
 const NavBar = props => {
 
-    // here we check to see if the navColActive is truthy. if it is, send the correct className info to the html element being rendered
+    const ctx = useContext(TitleContext)
 
     const classNameLiteral = () => {
         if(props.navColIsOpen){
@@ -17,7 +16,7 @@ const NavBar = props => {
 
     return(
         <nav className={styles["nav-bar"]}>
-            <h1>PocketPal</h1>
+            <h1>{ctx.title}</h1>
             <div className={classNameLiteral()} onClick={props.hamburgerClickHandler}>
                 <div className={styles.hamburger} />
             </div>

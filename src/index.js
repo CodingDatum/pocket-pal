@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import TitleProvider from './components/Systems/TitleProvider';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <TitleProvider><App /></TitleProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
