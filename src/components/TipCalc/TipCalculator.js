@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import Tip from './Tip';
 import styles from './TipCalculator.module.css';
 
 // WHAT THIS JS FILE SHOULD HANDLE:
@@ -12,13 +13,21 @@ const TipCalculator = props => {
     const [tipAmount, setTipAmount] = useState(20)
     const [dontBeADick, setDontBeADick] = useState(false)
     const [calculatedTip, setCalculatedTip] = useState(false);
-    const [goingUp, setGoingUp] = useState(false)
+
+    useEffect(() => {
+        let adjustedBill = +billAmount;
+        let adjustedTip = tipAmount;
+        adjustedTip = "." + adjustedTip;
+        let tip = adjustedBill * adjustedTip;
+        setCalculatedTip(tip.toFixed(2))
+    }, [billAmount, tipAmount])
 
     const buttonHandlerNum = (e) => {
         e.preventDefault();
         setActiveBill(true);
         const eventTargetValue = e.target.value
         setBillAmount(billAmount + eventTargetValue)
+    
     }
 
     const clearButtonHandler = () => {
@@ -38,8 +47,6 @@ const TipCalculator = props => {
             let newTip = tipAmount + 1
             setTipAmount(newTip)
             setDontBeADick(false)
-            calculateTipHandler()
-            setGoingUp(true)
         }
     }
 
@@ -51,26 +58,8 @@ const TipCalculator = props => {
             }else{
                 let newTip = tipAmount -1
                 setTipAmount(newTip)
-                calculateTipHandler()
-                setGoingUp(false)
             }
         }
-    }
-
-    const calculateTipHandler = () => {
-        let adjustedBill = +billAmount;
-        let adjustedTip = tipAmount;
-        if(goingUp){
-            adjustedTip += 1;
-        }
-        if(!goingUp){
-            adjustedTip -= 1;
-        }
-        adjustedTip = "." + adjustedTip;
-        console.log(adjustedBill)
-        console.log(adjustedTip)
-        let tip = adjustedBill * adjustedTip;
-        setCalculatedTip(tip.toFixed(2))
     }
 
     return (
@@ -98,7 +87,7 @@ const TipCalculator = props => {
                 <button className={styles.pos} onClick={increaseTipHandler}>+</button>
             </div>
             {!calculatedTip && <div className={styles.pretip}>(Tip Amount)</div>}
-            {calculatedTip && <div className={styles.tip}>${calculatedTip}</div>}
+            {calculatedTip && <Tip tipAmount={calculatedTip} />}
         </div>
     )
 };

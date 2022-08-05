@@ -1,0 +1,9 @@
+.tip {
+	color: #e2ecf8;
+	font-size: 1.8rem;
+	font-weight: bold;
+	width: 100vw;
+	background: rgba(0, 0, 0, 0.5);
+	text-align: center;
+	padding: 0.825rem;
+}
