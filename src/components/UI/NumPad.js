@@ -44,7 +44,7 @@ const NumPad = props => {
                 <button onClick={clearHandler} >cl</button>
             </div>
             <div className={styles["current-expense"]}>
-                {currentExpense || "expense"}
+                {currentExpense || "(expense)"}
             </div>
             <button className={styles.enter} onClick={updateGoalHandler}>ADD</button>
         </div>
