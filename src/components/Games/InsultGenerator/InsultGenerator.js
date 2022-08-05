@@ -39,7 +39,8 @@ const createFirstWord = () => {
     if(!completedListOne.includes(wordToAdd)){
         updateListOne(wordToAdd);
     }
-
+    // For whatever reason, when I put the return value inside of the above if statement, it comes up as undefined, but function properly
+    // When I leave it here, undefined never shows up, but the words do repeat themselves...
     return(wordToAdd);
 }
 
