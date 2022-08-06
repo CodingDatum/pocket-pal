@@ -9,7 +9,7 @@ const listThree = ["Slithering", "Ratchet", "Putrid", "Decrepid", "Scaggy", "Sli
 const InsultGenerator = props => {
 
     const [insult, setInsult] = useState("Click the button for a random insult");
-    const [disclaimer, setDisclaimer] = useState(false)
+    const [disclaimer, setDisclaimer] = useState(false);
 
     const insultGeneratorHandler = () => {
         const randomNumberOne = Math.floor(Math.random() * listOne.length);
