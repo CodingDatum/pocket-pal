@@ -3,71 +3,71 @@ import styles from './InsultGenerator.module.css';
 import InsultDisclaimer from './InsultDisclaimer';
 
 const listOne = ["Fuck-", "Cunt-", "Shit-", "Ass-", "Pussy-", "Bitch-", "Clit-", "Dick-", "Fart-", "Queef-", "Slut-"];
-const listTwo = ["face", "stick", "head", "licker", "bag", "hole", "bandit", "pipe", "breath", "troll"];
+const listTwo = ["face", "stick", "head", "licker", "bag", "hole", "bandit", "pipe", "breath", "troll", "mule"];
 const listThree = ["Slithering", "Ratchet", "Putrid", "Decrepid", "Scaggy", "Slimey", "Unrelenting", "Ruthless", "Insepid", "Festering"];
 
-let completedListOne = [];
-let completedListTwo = [];
-let completedListThree = [];
+let listOneUsedWords = [];
+let listTwoUsedWords = [];
+let listThreeUsedWords = [];
 
-const updateListOne = listItem => {
-    completedListOne.push(listItem)
-    if(listOne.length === completedListOne.length){
-        completedListOne = []
-    }
-}
-const updateListTwo = listItem => {
-    completedListTwo.push(listItem)
-    if(listTwo.length === completedListTwo.length){
-        completedListTwo = []
-    }
-}
+const generateFirstWord = () => {
 
-const updateListThree = listItem => {
-    completedListThree.push(listItem)
-    if(listThree.length === completedListThree.length){
-        completedListThree = []
+    let randomNumberOne = Math.floor(Math.random() * listOne.length);
+    let word = listOne[randomNumberOne];
+
+    while(listOneUsedWords.includes(word)){
+        word = generateFirstWord()
     }
+
+    updateListOneUsedWords(word)
+    return word
 }
 
-const createFirstWord = () => {
-    const randomNumberOne = Math.floor(Math.random() * listOne.length);
-    const wordToAdd = listOne[randomNumberOne];
-    if(completedListOne.includes(wordToAdd)){
-        createFirstWord()
+const updateListOneUsedWords = word => {
+    listOneUsedWords.push(word);
+    if(listOneUsedWords.length === listOne.length){
+        listOneUsedWords = []
     }
-    if(!completedListOne.includes(wordToAdd)){
-        updateListOne(wordToAdd);
-    }
-    // For whatever reason, when I put the return value inside of the above if statement, it comes up as undefined, but function properly
-    // When I leave it here, undefined never shows up, but the words do repeat themselves...
-    return(wordToAdd);
 }
 
-const createSecondWord = () => {
-    const randomNumberTwo = Math.floor(Math.random() * listTwo.length);
-    const wordToAdd = listTwo[randomNumberTwo];
-    if(completedListTwo.includes(wordToAdd)){
-        createSecondWord()
-    }
-    if(!completedListTwo.includes(wordToAdd)){
-        updateListTwo(wordToAdd);
+const generateSecondWord = () => {
+
+    let randomNumberTwo = Math.floor(Math.random() * listTwo.length);
+    let word = listTwo[randomNumberTwo];
+
+    while(listTwoUsedWords.includes(word)){
+        word = generateSecondWord()
     }
 
-    return(wordToAdd);
+    updateListTwoUsedWords(word)
+    return word
 }
 
-const createThirdWord = () => {
-    const randomNumberThree = Math.floor(Math.random() * listThree.length);
-    const wordToAdd = listThree[randomNumberThree];
-    if(completedListThree.includes(wordToAdd)){
-        createThirdWord()
+const updateListTwoUsedWords = word => {
+    listTwoUsedWords.push(word);
+    if(listTwoUsedWords.length === listTwo.length){
+        listTwoUsedWords = []
     }
-    if(!completedListThree.includes(wordToAdd)){
-        updateListThree(wordToAdd);
+}
+
+const generateThirdWord = () => {
+
+    let randomNumberThree = Math.floor(Math.random() * listThree.length);
+    let word = listThree[randomNumberThree];
+
+    while(listThreeUsedWords.includes(word)){
+        word = generateThirdWord()
     }
 
-    return(wordToAdd);
+    updateListThreeUsedWords(word)
+    return word
+}
+
+const updateListThreeUsedWords = word => {
+    listThreeUsedWords.push(word);
+    if(listThreeUsedWords.length === listThree.length){
+        listThreeUsedWords = []
+    }
 }
 
 const InsultGenerator = props => {
@@ -76,14 +76,11 @@ const InsultGenerator = props => {
     const [disclaimer, setDisclaimer] = useState(false);
 
     const insultGeneratorHandler = () => {
-        const firstWord = createFirstWord();
-        const secondWord = createSecondWord();
-        const thirdWord = createThirdWord();
+        const firstWord = generateFirstWord();
+        const secondWord = generateSecondWord();
+        const thirdWord = generateThirdWord();
         const finalInsult = thirdWord + " " + firstWord + secondWord;
         setInsult(finalInsult);
-        console.log(completedListOne)
-        console.log(completedListTwo)
-        console.log(completedListThree)
     }
 
     const backButtonHandler = () => {
