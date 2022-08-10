@@ -27,6 +27,18 @@ const DUMMY_OBJECTS = [{
         key:"30-5",
         value:"25"
     }]
+},{
+    name:"Multiplication",
+    cards: [{
+        key:"10x5",
+        value:"50"
+    },{
+        key:"20x10",
+        value:"200"
+    },{
+        key:"30x5",
+        value:"150"
+    }]
 }]
 
 const FlashcardsProvider = props => {
