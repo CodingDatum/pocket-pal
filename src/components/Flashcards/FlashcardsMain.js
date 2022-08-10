@@ -1,4 +1,4 @@
-import React , { useContext , useState , useEffect } from 'react';
+import React , { useContext , useState  } from 'react';
 import FlashcardsContext from './FlashcardsContext';
 
 import styles from './FlashcardsMain.module.css';
@@ -41,10 +41,12 @@ const FlashcardsMain = props => {
     return(
         <div className={styles.main}>
             <h3>{currentStack.name}</h3>
-            <button onClick={prevCardClickHandler}>prev card</button>
-            {cardSide === "front" && <div onClick={flipToBack}>{stackCards[cardIteration].key}</div>}
-            {cardSide === "back" && <div onClick={flipToFront}>{stackCards[cardIteration].value}</div>}
-            <button onClick={nextCardClickHandler}>next card</button>
+            <div className={styles["card-container"]}>
+                <button onClick={prevCardClickHandler}>prev card</button>
+                {cardSide === "front" && <div className={styles.front} onClick={flipToBack}>{stackCards[cardIteration].key}</div>}
+                {cardSide === "back" && <div className={styles.back} onClick={flipToFront}>{stackCards[cardIteration].value}</div>}
+                <button onClick={nextCardClickHandler}>next card</button>
+            </div>
         </div>
     )
 }

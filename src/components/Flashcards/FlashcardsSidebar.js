@@ -4,7 +4,11 @@ import styles from './FlashcardsSidebar.module.css';
 
 const FlashcardsSidebar = props => {
     return (
-        <div className={styles.sidebar}>Sidebar</div>
+        <div className={styles.sidebar}>
+            <button>add a stack</button>
+            <button>view stacks</button>
+            <button>add a card</button>
+        </div>
     )
 }
 
