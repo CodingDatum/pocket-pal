@@ -1,0 +1,11 @@
+.stack, .working{
+    margin-top: 2rem;
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+}
+
+.working{
+    background-color: green;
+    color: white;
+}

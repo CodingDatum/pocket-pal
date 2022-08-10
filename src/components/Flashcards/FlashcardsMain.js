@@ -1,16 +1,23 @@
-import React , { useContext , useState  } from 'react';
+import React , { useContext , useEffect, useState  } from 'react';
 import FlashcardsContext from './FlashcardsContext';
 
 import styles from './FlashcardsMain.module.css';
 
 const FlashcardsMain = props => {
 
-    const [cardIteration, setCardIteration] = useState(0);
-    const [cardSide, setCardSide] = useState("front");
-    const [frontSideCardStyle, setFrontSideCardStyle] = useState("front-side");
-    const [backSideCardStyle, setBackSideCardStyle] = useState("back-side")
-
     const ctx = useContext(FlashcardsContext);
+
+    const [cardIteration, setCardIteration] = useState(0);
+    const [frontSideCardStyle, setFrontSideCardStyle] = useState("front-side");
+    const [backSideCardStyle, setBackSideCardStyle] = useState("back-side");
+
+    const cardSide = ctx.cardSide
+
+    useEffect(()=>{
+        if(cardSide==="front"){
+            setFrontSideCardStyle("front-side")
+        }
+    }, [cardSide])
 
     const currentStack = ctx.workingStack;
     const stackCards = ctx.workingStack.cards; //this is another list of objects, so be careful!
@@ -22,7 +29,7 @@ const FlashcardsMain = props => {
             setCardIteration(cardIteration+1)
         }
         setFrontSideCardStyle("front-side")
-        setCardSide("front")
+        ctx.cardSideHandler("front")
     }
 
     const prevCardClickHandler = () => {
@@ -32,13 +39,13 @@ const FlashcardsMain = props => {
             setCardIteration(cardIteration-1)
         }
         setFrontSideCardStyle("front-side")
-        setCardSide("front")
+        ctx.cardSideHandler("front")
     }
 
     const flipToBack = () => {
         setFrontSideCardStyle("front-flip-down")
         setTimeout(() => {
-            setCardSide("back")
+            ctx.cardSideHandler("back")
             setBackSideCardStyle("back-side")
         }, 400)
     }
@@ -47,7 +54,7 @@ const FlashcardsMain = props => {
         setBackSideCardStyle("back-flip-up")
         setFrontSideCardStyle("front-side")
         setTimeout(() => {
-            setCardSide("front")
+            ctx.cardSideHandler("front")
         }, 400)
     }
 

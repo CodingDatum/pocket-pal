@@ -45,10 +45,24 @@ const FlashcardsProvider = props => {
 
     const [arrayOfStacks, setArrayOfStacks] = useState(DUMMY_OBJECTS);
     const [workingStack, setWorkingStack] = useState(DUMMY_OBJECTS[0]);
+    const [cardSide, setCardSide] = useState("front");
+
+    const cardsideHandler = (direction) => {
+        setCardSide(direction)
+    }
+
+    const changeWorkingStack = name => {
+        const stack = arrayOfStacks.find(stack => stack.name === name);
+        setWorkingStack(stack);
+        setCardSide("front");
+    }
 
     const flashcardsContext = {
         arrayOfStacks: arrayOfStacks,
-        workingStack: workingStack
+        workingStack: workingStack,
+        cardSide: cardSide,
+        changeWorkingStack: changeWorkingStack,
+        cardSideHandler: cardsideHandler,
     }
 
     return (

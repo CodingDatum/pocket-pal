@@ -16,13 +16,6 @@
     padding-top: 40px;
 }
 
-.choose-stack .stack, .working-stack{
-    margin-top: 2rem;
-    background-color: white;
-    color: black;
-    padding: 5px 10px;
-}
-
 .choose-stack button{
     border: 2px solid white;
     color: white;
@@ -31,9 +24,4 @@
     position: absolute;
     top: 10px;
     left: 10px;
-}
-
-.working-stack{
-    background-color: green;
-    color: white;
 }

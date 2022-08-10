@@ -1,6 +1,7 @@
 import React , { useContext } from 'react';
 import Backdrop from '../UI/Backdrop';
 import FlashcardsContext from './FlashcardsContext';
+import Stack from './Stack';
 
 import styles from './ChooseStack.module.css';
 
@@ -10,18 +11,23 @@ const ChooseStack = props => {
 
     const listOfStacks = ctx.arrayOfStacks;
 
+    const closeChooseStack = () => {
+        props.closeChooseStack()
+    }
+
     const stackTitles = listOfStacks.map(stack => {
         if(stack.name === ctx.workingStack.name){
             return (
-                <div className={styles["working-stack"]}>{stack.name}</div>
+                <Stack isWorkingStack={true} key={Math.random()*Math.random()} stackName={stack.name} />
             )
         }else{
             return (
-                <div className={styles.stack}>{stack.name}</div>
+                <Stack isWorkingStack={false} key={Math.random()*Math.random()} stackName={stack.name} closeChooseStack={closeChooseStack}/>
             )
         }
         
     })
+
 
     const buttonHandler = () => {
         props.closeChooseStack();
