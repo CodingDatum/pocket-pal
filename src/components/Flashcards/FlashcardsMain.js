@@ -7,6 +7,8 @@ const FlashcardsMain = props => {
 
     const [cardIteration, setCardIteration] = useState(0);
     const [cardSide, setCardSide] = useState("front");
+    const [frontSideCardStyle, setFrontSideCardStyle] = useState("front-side");
+    const [backSideCardStyle, setBackSideCardStyle] = useState("back-side")
 
     const ctx = useContext(FlashcardsContext);
 
@@ -19,6 +21,8 @@ const FlashcardsMain = props => {
         }else{
             setCardIteration(cardIteration+1)
         }
+        setFrontSideCardStyle("front-side")
+        setCardSide("front")
     }
 
     const prevCardClickHandler = () => {
@@ -27,14 +31,24 @@ const FlashcardsMain = props => {
         }else{
             setCardIteration(cardIteration-1)
         }
+        setFrontSideCardStyle("front-side")
+        setCardSide("front")
     }
 
     const flipToBack = () => {
-        setCardSide("back")
+        setFrontSideCardStyle("front-flip-down")
+        setTimeout(() => {
+            setCardSide("back")
+            setBackSideCardStyle("back-side")
+        }, 400)
     }
 
     const flipToFront = () => {
-        setCardSide("front")
+        setBackSideCardStyle("back-flip-up")
+        setFrontSideCardStyle("front-side")
+        setTimeout(() => {
+            setCardSide("front")
+        }, 400)
     }
 
 
@@ -43,8 +57,8 @@ const FlashcardsMain = props => {
             <h3>{currentStack.name}</h3>
             <div className={styles["card-container"]}>
                 <button onClick={prevCardClickHandler}>prev card</button>
-                {cardSide === "front" && <div className={styles.front} onClick={flipToBack}>{stackCards[cardIteration].key}</div>}
-                {cardSide === "back" && <div className={styles.back} onClick={flipToFront}>{stackCards[cardIteration].value}</div>}
+                {cardSide === "front" && <div className={styles[frontSideCardStyle]} onClick={flipToBack}>{stackCards[cardIteration].key}</div>}
+                {cardSide === "back" && <div className={styles[backSideCardStyle]} onClick={flipToFront}>{stackCards[cardIteration].value}</div>}
                 <button onClick={nextCardClickHandler}>next card</button>
             </div>
         </div>
