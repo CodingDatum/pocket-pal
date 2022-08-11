@@ -12,6 +12,7 @@ const Stack = props => {
     const changeStackHandler = () => {
         ctx.cardSideHandler("front");
         ctx.changeWorkingStack(props.stackName);
+        ctx.changeCardIteration("start")
         props.closeChooseStack();
     }
 

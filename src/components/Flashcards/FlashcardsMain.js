@@ -7,9 +7,10 @@ const FlashcardsMain = props => {
 
     const ctx = useContext(FlashcardsContext);
 
-    const [cardIteration, setCardIteration] = useState(0);
     const [frontSideCardStyle, setFrontSideCardStyle] = useState("front-side");
     const [backSideCardStyle, setBackSideCardStyle] = useState("back-side");
+
+    const cardIteration = ctx.cardIteration
 
     const cardSide = ctx.cardSide
 
@@ -24,9 +25,9 @@ const FlashcardsMain = props => {
 
     const nextCardClickHandler = () => {
         if(cardIteration === stackCards.length-1){
-            setCardIteration(0)
+            ctx.changeCardIteration("start")
         }else{
-            setCardIteration(cardIteration+1)
+            ctx.changeCardIteration("up")
         }
         setFrontSideCardStyle("front-side")
         ctx.cardSideHandler("front")
@@ -34,9 +35,9 @@ const FlashcardsMain = props => {
 
     const prevCardClickHandler = () => {
         if(cardIteration === 0){
-            setCardIteration(stackCards.length-1)
+            ctx.changeCardIteration("end")
         }else{
-            setCardIteration(cardIteration-1)
+            ctx.changeCardIteration("down")
         }
         setFrontSideCardStyle("front-side")
         ctx.cardSideHandler("front")

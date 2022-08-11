@@ -28,15 +28,10 @@ const ChooseStack = props => {
         
     })
 
-
-    const buttonHandler = () => {
-        props.closeChooseStack();
-    }
-
     return(
         <Backdrop>
             <div className={styles["choose-stack"]}>
-                <button onClick={buttonHandler}>x</button>
+                <button onClick={closeChooseStack}>x</button>
                 {stackTitles}
             </div>
         </Backdrop>

@@ -46,8 +46,24 @@ const FlashcardsProvider = props => {
     const [arrayOfStacks, setArrayOfStacks] = useState(DUMMY_OBJECTS);
     const [workingStack, setWorkingStack] = useState(DUMMY_OBJECTS[0]);
     const [cardSide, setCardSide] = useState("front");
+    const [cardIteration, setCardIteration] = useState(0);
 
-    const cardsideHandler = (direction) => {
+    const changeCardIteration = (phrase) => {
+        if(phrase === "up"){
+            setCardIteration(cardIteration+1)
+        }
+        if(phrase === "down"){
+            setCardIteration(cardIteration-1)
+        }
+        if(phrase === "start"){
+            setCardIteration(0)
+        }
+        if(phrase === "end"){
+            setCardIteration(workingStack.cards.length-1)
+        }
+    }
+
+    const cardSideHandler = (direction) => {
         setCardSide(direction)
     }
 
@@ -57,12 +73,39 @@ const FlashcardsProvider = props => {
         setCardSide("front");
     }
 
+    const addCard = ( key, value) => {
+
+        let rawArrayOfStacks = arrayOfStacks;
+        let rawCardObject = {
+            key: key,
+            value: value
+        }
+        for(let i = 0 ; i < rawArrayOfStacks.length ; i++){
+            let arrayObject = rawArrayOfStacks[i];
+            if(workingStack.name === arrayObject.name){
+                arrayObject.cards.push(rawCardObject)
+            }
+        }
+
+        setArrayOfStacks(rawArrayOfStacks)
+
+    }
+
+    const addStackHandler = (name) => {
+        let rawArrayOfStacks = arrayOfStacks;
+        
+    }
+
     const flashcardsContext = {
         arrayOfStacks: arrayOfStacks,
         workingStack: workingStack,
         cardSide: cardSide,
+        cardIteration: cardIteration,
         changeWorkingStack: changeWorkingStack,
-        cardSideHandler: cardsideHandler,
+        cardSideHandler: cardSideHandler,
+        addCard: addCard,
+        addStackHandler: addStackHandler,
+        changeCardIteration: changeCardIteration
     }
 
     return (
