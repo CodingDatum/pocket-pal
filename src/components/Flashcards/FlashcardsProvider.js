@@ -93,6 +93,7 @@ const FlashcardsProvider = props => {
 
     const addStackHandler = (name) => {
         let rawArrayOfStacks = arrayOfStacks;
+        console.log(rawArrayOfStacks)
         
     }
 
