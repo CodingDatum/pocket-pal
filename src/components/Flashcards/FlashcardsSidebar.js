@@ -31,8 +31,8 @@ const FlashcardsSidebar = props => {
 
     const addStackHandler = (stackName) => {
         setAddStackModal(false)
-        ctx.addStackHandler(stackName)
         setAddCardModal(true)
+        ctx.addStackHandler(stackName)
     }
 
     return (

@@ -93,8 +93,17 @@ const FlashcardsProvider = props => {
 
     const addStackHandler = (name) => {
         let rawArrayOfStacks = arrayOfStacks;
-        console.log(rawArrayOfStacks)
-        
+        let newObject = {
+            name: name,
+            cards:[{
+                key: "first card question",
+                value: "first Card Answer"
+            }]
+        }
+        rawArrayOfStacks.push(newObject)
+        setArrayOfStacks(rawArrayOfStacks)
+        setCardIteration(0)
+        changeWorkingStack(name)
     }
 
     const flashcardsContext = {
