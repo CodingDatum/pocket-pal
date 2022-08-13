@@ -17,6 +17,7 @@ const Flashcards = props => {
     const stackIsEmpty=ctx.stackIsEmpty
 
     const [chooseStack, setChooseStack] = useState(false);
+    const [refresh, setRefresh] = useState("1")
 
     const chooseStackHandler = () => {
         setChooseStack(true)
@@ -32,13 +33,25 @@ const Flashcards = props => {
         ctx.deleteCard(currentStack.name, savedCardIteration)
     }
 
+    const forceRefresh = () => {
+        if(refresh === "1"){
+            setRefresh("2")
+            return
+        }
+        if(refresh === "2"){
+            setRefresh("1")
+        }
+    }
+
     return (
-        <div className={styles.container}>
-            {chooseStack && <ChooseStack closeChooseStack={closeChooseStack} />}
-            {stackIsEmpty && <div className={styles.empty}>The current stack {workingStack.name} has no cards</div>}
-            {!stackIsEmpty && <FlashcardsMain deleteCardHandler={deleteCardHandler} />}
-            <FlashcardsSidebar chooseStackHandler={chooseStackHandler} />
-        </div>
+        <React.Fragment>
+            {refresh && <div className={styles.container}>
+                {chooseStack && <ChooseStack closeChooseStack={closeChooseStack} />}
+                {stackIsEmpty && <div className={styles.empty}>The current stack {workingStack.name} has no cards</div>}
+                {!stackIsEmpty && <FlashcardsMain deleteCardHandler={deleteCardHandler} forceRefresh={forceRefresh}/>}
+                <FlashcardsSidebar chooseStackHandler={chooseStackHandler} />
+            </div>}
+        </React.Fragment>
     )
 }
 

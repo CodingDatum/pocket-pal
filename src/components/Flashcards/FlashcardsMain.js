@@ -21,6 +21,14 @@ const FlashcardsMain = props => {
         }
     }, [cardSide])
 
+    useEffect(()=> {
+        forceRefresh()
+    }, [ctx.stackIsEmpty])
+
+    const forceRefresh = () => {
+        props.forceRefresh()
+    }
+
 
     const nextCardClickHandler = () => {
         if(cardIteration === stackCards.length-1){
