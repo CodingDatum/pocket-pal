@@ -47,6 +47,7 @@ const FlashcardsProvider = props => {
     const [workingStack, setWorkingStack] = useState(DUMMY_OBJECTS[0]);
     const [cardSide, setCardSide] = useState("front");
     const [cardIteration, setCardIteration] = useState(0);
+    const [stackIsEmpty, setStackIsEmpty] = useState(false);
 
     const changeCardIteration = (phrase) => {
         if(phrase === "up"){
@@ -86,9 +87,7 @@ const FlashcardsProvider = props => {
                 arrayObject.cards.push(rawCardObject)
             }
         }
-
         setArrayOfStacks(rawArrayOfStacks)
-
     }
 
     const addStackHandler = (name) => {
@@ -106,16 +105,47 @@ const FlashcardsProvider = props => {
         changeWorkingStack(name)
     }
 
+    const checkWorkingStack = () => {
+        if(workingStack.length<=1){
+            setStackIsEmpty(true)
+        }else{
+            return
+        }
+    }
+
+    const deleteCard = (name, index, callback) => {
+
+        let rawArrayOfStacks = arrayOfStacks;
+        let stackToChange = rawArrayOfStacks.find(stack => stack.name===name);
+        console.log(stackToChange.cards)
+        stackToChange.cards.splice(index, 1);
+        console.log(stackToChange.cards)
+
+        // This for loop might be the problem
+        for(let i = 0 ; i < rawArrayOfStacks.length ; i++){
+            let stack = rawArrayOfStacks[i];
+            if(stack.name === name){
+                stack.cards = stackToChange.cards
+                setArrayOfStacks(rawArrayOfStacks);
+                changeWorkingStack(name)
+                checkWorkingStack()
+                setCardIteration(0)
+            }
+        }
+    }
+
     const flashcardsContext = {
         arrayOfStacks: arrayOfStacks,
         workingStack: workingStack,
         cardSide: cardSide,
         cardIteration: cardIteration,
+        stackIsEmpty: stackIsEmpty,
         changeWorkingStack: changeWorkingStack,
         cardSideHandler: cardSideHandler,
         addCard: addCard,
         addStackHandler: addStackHandler,
-        changeCardIteration: changeCardIteration
+        changeCardIteration: changeCardIteration,
+        deleteCard: deleteCard
     }
 
     return (
