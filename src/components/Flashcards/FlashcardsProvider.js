@@ -113,25 +113,16 @@ const FlashcardsProvider = props => {
         }
     }
 
-    const deleteCard = (name, index) => {
+    const deleteCard = () => {
 
         let rawArrayOfStacks = arrayOfStacks;
-        let stackToChange = rawArrayOfStacks.find(stack => stack.name===name);
-        console.log(stackToChange.cards)
-        stackToChange.cards.splice(index, 1);
-        console.log(stackToChange.cards)
-
-        // This for loop might be the problem
-        rawArrayOfStacks.forEach((stack) => {
-            if(stack.name === name){
-                stack = stackToChange
+        rawArrayOfStacks.forEach(stack => {
+            if(stack.name === workingStack.name){
+                stack.cards = stack.cards.filter(card => card.key !== workingStack.cards[cardIteration].key)
+                setWorkingStack(stack)
             }
         })
-
-        setArrayOfStacks(rawArrayOfStacks);
-        changeWorkingStack(name)
-        checkWorkingStack()
-        setCardIteration(0)
+        setArrayOfStacks(rawArrayOfStacks)
     }
 
     const flashcardsContext = {

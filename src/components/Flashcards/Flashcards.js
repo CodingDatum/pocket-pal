@@ -10,8 +10,6 @@ import styles from './Flashcards.module.css';
 const Flashcards = props => {
 
     const ctx = useContext(FlashcardsContext)
-    const currentStack = ctx.workingStack;
-    const cardIteration = ctx.cardIteration
 
     const workingStack = ctx.workingStack
     const stackIsEmpty=ctx.stackIsEmpty
@@ -28,9 +26,8 @@ const Flashcards = props => {
     }
 
     const deleteCardHandler = () => {
-        let savedCardIteration = cardIteration
+        ctx.deleteCard()
         ctx.changeCardIteration("start")
-        ctx.deleteCard(currentStack.name, savedCardIteration)
     }
 
     const forceRefresh = () => {
