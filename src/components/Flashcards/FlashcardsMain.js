@@ -14,12 +14,26 @@ const FlashcardsMain = props => {
     const stackCards = ctx.workingStack.cards;
     const cardIteration = ctx.cardIteration
     const cardSide = ctx.cardSide
+    const key = stackCards[cardIteration].key;
+    const value = stackCards[cardIteration].value;
 
     useEffect(()=>{
         if(cardSide==="front"){
             setFrontSideCardStyle("front-side")
         }
     }, [cardSide])
+
+    const findFontSize = (content) => {
+        if(content.length <= 58){
+            return "2.25rem"
+        }
+        if(content.length > 58){
+            return "1.25rem"
+        }
+    }
+
+    const fontSizeFront = findFontSize(key)
+    const fontSizeBack = findFontSize(value)
 
     const nextCardClickHandler = () => {
         if(cardIteration === stackCards.length-1){
@@ -68,8 +82,8 @@ const FlashcardsMain = props => {
             <div className={styles["card-container"]}>
                 <button onClick={prevCardClickHandler}>prev card</button>
                 <button onClick={deleteCardHandler}>delete card</button>
-                {cardSide === "front" && <div className={styles[frontSideCardStyle]} onClick={flipToBack}>{stackCards[cardIteration].key}</div>}
-                {cardSide === "back" && <div className={styles[backSideCardStyle]} onClick={flipToFront}>{stackCards[cardIteration].value}</div>}
+                {cardSide === "front" && <div className={styles[frontSideCardStyle]} style={{fontSize: fontSizeFront}} onClick={flipToBack}>{key}</div>}
+                {cardSide === "back" && <div className={styles[backSideCardStyle]} style={{fontSize: fontSizeBack}} onClick={flipToFront}>{value}</div>}
                 <button onClick={nextCardClickHandler}>next card</button>
             </div>
         </div>

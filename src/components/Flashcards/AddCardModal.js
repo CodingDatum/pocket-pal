@@ -7,6 +7,7 @@ const AddCardModal = props => {
 
     const ctx = useContext(FlashcardsContext)
     const currentStackName = ctx.workingStack.name
+    const listOfStacks = ctx.arrayOfStacks
 
     const [key, setKey] = useState("");
     const [value, setValue] = useState("");
@@ -29,9 +30,13 @@ const AddCardModal = props => {
         props.forceRefresh()
     }
 
+    const closeModal = () => {
+        props.removeAddCardModal()
+    }
+
     return(
         <Backdrop>
-            <div className={styles.container}>
+            {listOfStacks.length > 0 && <div className={styles.container}>
                 <h3>Add To: {currentStackName}</h3>
                 <div>
                     <h4>Front side</h4>
@@ -42,7 +47,11 @@ const AddCardModal = props => {
                     <input type="text" onChange={updateValueHandler} />
                 </div>
                 <button onClick={submitCardHandler}>Add Card</button>
-            </div>
+            </div>}
+            {listOfStacks.length === 0 && <div className={styles.empty}>
+                <div>There are currently no stacks of cards</div> 
+                <button onClick={closeModal}>OK</button>   
+            </div>}
         </Backdrop>
     )
 }

@@ -1,52 +1,37 @@
-import React , { useState } from 'react';
+import React , { useState , useEffect } from 'react';
 import FlashcardsContext from './FlashcardsContext';
 
 // I will use the term Stacks to refer to each stack of cards in the array
 
 const DUMMY_OBJECTS = [{
-    name: "Addition",
+    name: "Flashcards",
     cards: [{
-        key:"1+1",
-        value: "2"
+        key:"click card to flip over",
+        value: "this is the back of the card! click again to flip, or view next/prev stacks"
     },{
-        key:"2+2",
-        value:"4"
+        key:"How do I add a card?",
+        value:"Click add card button! It will add a card to the working stack"
     },{
-        key: "3+3",
-        value:"6"
-    }]
-},{
-    name:"Subtraction",
-    cards: [{
-        key:"10-5",
-        value:"5"
-    },{
-        key:"20-10",
-        value:"10"
-    },{
-        key:"30-5",
-        value:"25"
-    }]
-},{
-    name:"Multiplication",
-    cards: [{
-        key:"10x5",
-        value:"50"
-    },{
-        key:"20x10",
-        value:"200"
-    },{
-        key:"30x5",
-        value:"150"
+        key: "How do I add a new stack?",
+        value:"click Add Stack Button"
     }]
 }]
 
 const FlashcardsProvider = props => {
 
-    const [arrayOfStacks, setArrayOfStacks] = useState(DUMMY_OBJECTS);
-    const [workingStack, setWorkingStack] = useState(DUMMY_OBJECTS[0]);
+    const [arrayOfStacks, setArrayOfStacks] = useState(() => {
+        const cardsSaved = localStorage.getItem("cards");
+        const cardsValue = JSON.parse(cardsSaved);
+        return cardsValue || DUMMY_OBJECTS;
+    });
+    const [workingStack, setWorkingStack] = useState(arrayOfStacks[0] || DUMMY_OBJECTS[0]);
     const [cardSide, setCardSide] = useState("front");
     const [cardIteration, setCardIteration] = useState(0);
+
+    useEffect(() => {
+        let cardsAsString = JSON.stringify(arrayOfStacks);
+        localStorage.setItem("cards", cardsAsString)
+    },[arrayOfStacks])
 
     const changeCardIteration = (phrase) => {
         if(phrase === "up"){
