@@ -17,6 +17,12 @@
     font-size: 1.4rem;
 }
 
+@media (max-height: 600px){
+    .container h4{
+        transform: translateY(0%)
+    }
+}
+
 .container div{
     display: flex;
     flex-direction: column;
