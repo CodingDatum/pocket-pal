@@ -26,6 +26,7 @@ const AddCardModal = props => {
     const submitCardHandler = () => {
         ctx.addCard(key, value)
         props.removeAddCardModal()
+        props.forceRefresh()
     }
 
     return(

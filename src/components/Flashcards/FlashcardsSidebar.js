@@ -35,9 +35,13 @@ const FlashcardsSidebar = props => {
         ctx.addStackHandler(stackName)
     }
 
+    const forceRefresh = () => {
+        props.forceRefresh()
+    }
+
     return (
         <div className={styles.sidebar}>
-            {addCardModal && <AddCardModal removeAddCardModal={removeAddCardModal} />}
+            {addCardModal && <AddCardModal removeAddCardModal={removeAddCardModal} forceRefresh={forceRefresh}/>}
             {addStackModal && <AddStackModal addStackHandler={addStackHandler} />}
             <button onClick={renderAddStackModal}>add a stack</button>
             <button onClick={viewStacksHandler}>view stacks</button>
