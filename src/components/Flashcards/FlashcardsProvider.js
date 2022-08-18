@@ -94,10 +94,7 @@ const FlashcardsProvider = props => {
         let rawArrayOfStacks = arrayOfStacks;
         let newObject = {
             name: name,
-            cards:[{
-                key: "first card question",
-                value: "first Card Answer"
-            }]
+            cards:[]
         }
         rawArrayOfStacks.push(newObject)
         setArrayOfStacks(rawArrayOfStacks)
@@ -118,6 +115,12 @@ const FlashcardsProvider = props => {
         setArrayOfStacks(rawArrayOfStacks)
     }
 
+    const deleteStack = (name) => {
+        let rawArrayOfStacks = arrayOfStacks;
+        let newArrayOfStacks = rawArrayOfStacks.filter(stack => stack.name !== name);
+        setArrayOfStacks(newArrayOfStacks)
+    }
+
     const flashcardsContext = {
         arrayOfStacks: arrayOfStacks,
         workingStack: workingStack,
@@ -128,7 +131,8 @@ const FlashcardsProvider = props => {
         addCard: addCard,
         addStackHandler: addStackHandler,
         changeCardIteration: changeCardIteration,
-        deleteCard: deleteCard
+        deleteCard: deleteCard,
+        deleteStack: deleteStack
     }
 
     return (

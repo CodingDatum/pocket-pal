@@ -1,12 +1,9 @@
-import React , { useState , useContext } from 'react';
+import React , { useState } from 'react';
 import Backdrop from '../UI/Backdrop';
-import FlashcardsContext from './FlashcardsContext';
 
 import styles from './AddStackModal.module.css';
 
 const AddStackModal = props => {
-
-    const ctx = useContext(FlashcardsContext)
 
     const [stackName, setStackName] = useState("");
 

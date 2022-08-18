@@ -16,10 +16,20 @@ const Stack = props => {
         props.closeChooseStack();
     }
 
+    const deleteStackHandler = () => {
+        props.deleteStackHandler(props.stackName)
+    }
+
     return (
         <React.Fragment>
-        {workingStack && <div className={styles.working}>{props.stackName}</div>}
-        {!workingStack && <div className={styles.stack} onClick={changeStackHandler}>{props.stackName}</div>}
+        {workingStack && <div className={styles["stack-container"]}>
+            <div className={styles.working}>{props.stackName}</div>
+            <button className={styles.button} onClick={deleteStackHandler}>x</button>    
+        </div>}
+        {!workingStack && <div className={styles["stack-container"]}>
+            <div className={styles.stack} onClick={changeStackHandler}>{props.stackName}</div>
+            <button className={styles.button} onClick={deleteStackHandler}>x</button>
+        </div>}
         </React.Fragment>
     )
 }

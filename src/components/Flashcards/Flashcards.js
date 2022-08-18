@@ -44,7 +44,7 @@ const Flashcards = props => {
         <React.Fragment>
             {refresh && <div className={styles.container}>
                 {chooseStack && <ChooseStack closeChooseStack={closeChooseStack} />}
-                {stackCardLength === 0 && <div className={styles.empty}>The current stack {workingStack.name} has no cards</div>}
+                {stackCardLength === 0 && <div className={styles.empty}>Either there are no Stacks to choose from, or no cards in current stack</div>}
                 {stackCardLength > 0 && <FlashcardsMain deleteCardHandler={deleteCardHandler} forceRefresh={forceRefresh}/>}
                 <FlashcardsSidebar chooseStackHandler={chooseStackHandler} forceRefresh={forceRefresh} />
             </div>}
