@@ -1,0 +1,27 @@
+.choose-stack{
+    height: 80%;
+    width: 80%;
+    border: 2px solid white;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y:scroll;
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.choose-stack .button{
+    border: 2px solid white;
+    color: white;
+    background-color: black;
+    padding: 10px 15px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}

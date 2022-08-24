@@ -90,7 +90,7 @@ const InsultGenerator = props => {
     useEffect(()=>{
         setTimeout(()=>{
             setDisclaimer(true)
-        }, 1000)
+        }, 500)
     }, [])
 
     const closeDisclaimer = () => {

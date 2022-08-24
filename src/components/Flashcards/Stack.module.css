@@ -1,0 +1,24 @@
+.stack, .working{
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+}
+
+.working{
+    background-color: green;
+    color: white;
+}
+
+.button{
+    background-color: white;
+    color: red;
+    padding: 0.4rem 0.6rem;
+}
+
+.stack-container{
+    display: flex;
+    margin-top: 2rem;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}

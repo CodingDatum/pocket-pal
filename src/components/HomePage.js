@@ -8,6 +8,8 @@ import Games from './Games/Games';
 import ListProvider from './Lists/ListProvider';
 import MusicPal from './MusicPal/MusicPal';
 import TitleContext from './Systems/TitleContext';
+import Flashcards from './Flashcards/Flashcards';
+import FlashcardsProvider from './Flashcards/FlashcardsProvider';
 
 const HomePage = props => {
 
@@ -50,14 +52,21 @@ const HomePage = props => {
         ctx.changeTitle("GamePal")
     }
 
+    const renderFlashcards = () => {
+        props.goAway();
+        setLocation("flashcards");
+        ctx.changeTitle("Flashcards")
+    }
+
     return(
         <div className={styles.home}>
-            {location === "home" && <HomePageButtons renderBudgetPal={renderBudgetPal} renderTipCalc={renderTipCalc} renderListPal={renderListPal} renderMusicPal={renderMusicPal} renderGames={renderGames} />}
+            {location === "home" && <HomePageButtons renderBudgetPal={renderBudgetPal} renderTipCalc={renderTipCalc} renderListPal={renderListPal} renderMusicPal={renderMusicPal} renderGames={renderGames} renderFlashcards={renderFlashcards} />}
             {location === "budget" && <Budget />}
             {location === "tip" && <TipCalculator />}
             {location === "list" && <ListProvider><ListPal /></ListProvider>}
             {location === "music" && <MusicPal />}
             {location === "game" && <Games />}
+            {location === "flashcards" && <FlashcardsProvider><Flashcards /></FlashcardsProvider>}
             
         </div>
     )

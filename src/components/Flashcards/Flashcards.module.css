@@ -1,0 +1,18 @@
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(13, 14, 25);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.empty{
+    height: 70%;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    padding: 8rem 2rem 0rem 2rem;
+}

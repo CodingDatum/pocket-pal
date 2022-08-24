@@ -1,0 +1,86 @@
+.main{
+    height: 70%;
+    width: 100%;
+    position: relative;
+}
+
+.main h3{
+    height: 15%;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: none;
+    transform: translateY(1rem)
+}
+
+.main button{
+    color: white;
+    border: 2px solid white;
+    font-weight: bold;
+    background-color: black;
+    padding: 1.4rem 1.25rem;
+    letter-spacing: 0.2rem;
+    align-self:flex-end;
+}
+
+.card-container{
+    display: flex;
+    width: 100%;
+    height: 85%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.front-side, .back-side, .front-flip-down, .back-flip-up{
+    height: 50%;
+    width: 80%;
+    background-color: rgba(87, 133, 141, 0.25);
+    position: absolute;
+    transform: translateY(-20%);
+    text-align: center;
+    padding: 1.5rem;
+    border: 1px solid white;
+}
+
+.back-side{
+    transform: rotateX(-90deg) translateY(-20%);
+    transform-origin: 50% 50%;
+    animation: back-init 0.3s linear forwards;
+}
+
+.front-side{
+    transform: rotateX(90deg);
+    transform-origin: 50% 50%;
+    animation: front-init 0.3s linear forwards;
+}
+
+@keyframes front-init{
+    to{
+        transform: rotateX(0deg) translateY(-20%);
+    }
+}
+
+@keyframes back-init{
+    to{
+        transform: rotateX(0deg) translateY(-20%);
+    }
+}
+
+.front-flip-down{
+    animation: flip-down 0.8s linear forwards;
+}
+
+@keyframes flip-down{
+    to{
+        transform: rotateX(180deg) translateY(20%);
+    }
+}
+
+.back-flip-up{
+    animation: flip-up 0.8s linear forwards;
+}
+
+@keyframes flip-up{
+    to{
+        transform: rotateX(-180deg) translateY(20%);
+    }
+}
