@@ -104,7 +104,7 @@ const InsultGenerator = props => {
             <button className={styles["back-button"]} onClick={backButtonHandler}>back</button>
             <div className={styles["insult-generator__container"]}>
                 <span>{insult}</span>
-                <button className={styles.button} onClick={insultGeneratorHandler}>Button</button>
+                <button className={styles.button} onClick={insultGeneratorHandler}>Generate Insult</button>
             </div>
         </React.Fragment>
     )
