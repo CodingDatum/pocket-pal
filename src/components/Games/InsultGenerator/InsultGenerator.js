@@ -12,10 +12,10 @@ let listThreeUsedWords = [];
 
 const generateFirstWord = () => {
 
-    let randomNumberOne = Math.floor(Math.random() * listOne.length);
+    let randomNumberOne = Math.floor(Math.random() * listOne.length-1);
     let word = listOne[randomNumberOne];
 
-    while(listOneUsedWords.includes(word)){
+    if(listOneUsedWords.includes(word)){
         word = generateFirstWord()
     }
 
@@ -32,10 +32,10 @@ const updateListOneUsedWords = word => {
 
 const generateSecondWord = () => {
 
-    let randomNumberTwo = Math.floor(Math.random() * listTwo.length);
+    let randomNumberTwo = Math.floor(Math.random() * listTwo.length-1);
     let word = listTwo[randomNumberTwo];
 
-    while(listTwoUsedWords.includes(word)){
+    if(listTwoUsedWords.includes(word)){
         word = generateSecondWord()
     }
 
@@ -52,10 +52,10 @@ const updateListTwoUsedWords = word => {
 
 const generateThirdWord = () => {
 
-    let randomNumberThree = Math.floor(Math.random() * listThree.length);
+    let randomNumberThree = Math.floor(Math.random() * listThree.length-1);
     let word = listThree[randomNumberThree];
 
-    while(listThreeUsedWords.includes(word)){
+    if(listThreeUsedWords.includes(word)){
         word = generateThirdWord()
     }
 
