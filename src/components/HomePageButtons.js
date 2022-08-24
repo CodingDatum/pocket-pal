@@ -20,9 +20,10 @@ const HomePageButtons = props => {
                     <Button buttonImage="🎫" buttonName="Study" onClick={props.renderFlashcards} />
                 </div>
 
-                <div className={styles["container-1"]}></div>
+                <div className={styles["container-1"]}>
+                    <Button buttonImage="📆" buttonName="Events" onClick={props.renderEvents} />
+                </div>
                 
-
             </div>
 
         </div>

@@ -1,0 +1,34 @@
+.events-container {
+	text-align: center;
+	padding: 2rem 1.25rem;
+	height: 90vh;
+	transform: translateX(-100%);
+	animation: animate 0.5s ease-in-out forwards;
+	background-color: rgb(13, 14, 25);
+    color: white;
+}
+
+@keyframes animate {
+	to {
+		transform: translateX(0);
+	}
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top h4{
+    font-size: 1.5rem;
+}
+
+.top button{
+    width: 5.5rem;
+    height: 2rem;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+}
