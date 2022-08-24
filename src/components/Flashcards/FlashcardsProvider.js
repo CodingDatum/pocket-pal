@@ -31,7 +31,7 @@ const FlashcardsProvider = props => {
     useEffect(() => {
         let cardsAsString = JSON.stringify(arrayOfStacks);
         localStorage.setItem("cards", cardsAsString)
-    },[arrayOfStacks])
+    },[arrayOfStacks, setArrayOfStacks])
 
     const changeCardIteration = (phrase) => {
         if(phrase === "up"){
@@ -70,9 +70,11 @@ const FlashcardsProvider = props => {
             if(workingStack.name === arrayObject.name){
                 arrayObject.cards.push(rawCardObject)
                 setWorkingStack(arrayObject)
+                setArrayOfStacks(rawArrayOfStacks)
             }
         }
-        setArrayOfStacks(rawArrayOfStacks)
+        
+        // Might have to move the above function call inside of the for loop... or get rid of for loop...
     }
 
     const addStackHandler = (name) => {
@@ -85,6 +87,8 @@ const FlashcardsProvider = props => {
         setArrayOfStacks(rawArrayOfStacks)
         setCardIteration(0)
         changeWorkingStack(name)
+        let cardsAsString = JSON.stringify(arrayOfStacks);
+        localStorage.setItem("cards", cardsAsString)
     }
 
     const deleteCard = () => {
