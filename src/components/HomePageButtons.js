@@ -17,7 +17,7 @@ const HomePageButtons = props => {
                 <div className={styles["container-1"]}>
                     <Button buttonImage="🎹" buttonName="Music" onClick={props.renderMusicPal} />
                     <Button buttonImage="🎭" buttonName="Games" onClick={props.renderGames} />
-                    <Button buttonImage="🎫" buttonName="Cards" onClick={props.renderFlashcards} />
+                    <Button buttonImage="🎫" buttonName="Study" onClick={props.renderFlashcards} />
                 </div>
 
                 <div className={styles["container-1"]}></div>
