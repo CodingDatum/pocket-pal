@@ -4,7 +4,7 @@ import InsultDisclaimer from './InsultDisclaimer';
 
 const listOne = ["Fuck-", "Cunt-", "Shit-", "Ass-", "Pussy-", "Bitch-", "Clit-", "Dick-", "Fart-", "Queef-", "Slut-"];
 const listTwo = ["face", "stick", "head", "licker", "bag", "hole", "bandit", "pipe", "breath", "troll", "mule"];
-const listThree = ["Slithering", "Ratchet", "Putrid", "Decrepid", "Scaggy", "Slimey", "Unrelenting", "Ruthless", "Insepid", "Festering"];
+const listThree = ["Slithering", "Ratchet", "Putrid", "Decrepid", "Scaggy", "Slimey", "Unrelenting", "Ruthless", "Insepid", "Festering", "Notorious"];
 
 let listOneUsedWords = [];
 let listTwoUsedWords = [];
@@ -12,7 +12,7 @@ let listThreeUsedWords = [];
 
 const generateFirstWord = () => {
 
-    let randomNumberOne = Math.floor(Math.random() * listOne.length-1);
+    let randomNumberOne = Math.floor(Math.random() * listOne.length);
     let word = listOne[randomNumberOne];
 
     if(listOneUsedWords.includes(word)){
@@ -32,7 +32,7 @@ const updateListOneUsedWords = word => {
 
 const generateSecondWord = () => {
 
-    let randomNumberTwo = Math.floor(Math.random() * listTwo.length-1);
+    let randomNumberTwo = Math.floor(Math.random() * listTwo.length);
     let word = listTwo[randomNumberTwo];
 
     if(listTwoUsedWords.includes(word)){
@@ -52,7 +52,7 @@ const updateListTwoUsedWords = word => {
 
 const generateThirdWord = () => {
 
-    let randomNumberThree = Math.floor(Math.random() * listThree.length-1);
+    let randomNumberThree = Math.floor(Math.random() * listThree.length);
     let word = listThree[randomNumberThree];
 
     if(listThreeUsedWords.includes(word)){
@@ -80,6 +80,7 @@ const InsultGenerator = props => {
         const secondWord = generateSecondWord();
         const thirdWord = generateThirdWord();
         const finalInsult = thirdWord + " " + firstWord + secondWord;
+        console.log(finalInsult)
         setInsult(finalInsult);
     }
 
