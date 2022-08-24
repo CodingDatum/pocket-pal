@@ -73,6 +73,9 @@ const FlashcardsProvider = props => {
                 setArrayOfStacks(rawArrayOfStacks)
             }
         }
+
+        let cardsAsString = JSON.stringify(arrayOfStacks);
+        localStorage.setItem("cards", cardsAsString)
         
         // Might have to move the above function call inside of the for loop... or get rid of for loop...
     }
