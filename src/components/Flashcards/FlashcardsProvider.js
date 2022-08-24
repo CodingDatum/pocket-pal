@@ -71,6 +71,7 @@ const FlashcardsProvider = props => {
                 arrayObject.cards.push(rawCardObject)
                 setWorkingStack(arrayObject)
                 setArrayOfStacks(rawArrayOfStacks)
+                setCardSide("front");
             }
         }
 
