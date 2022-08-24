@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/pocket-pal/static/css/main.7138a70c.chunk.css",
-    "main.js": "/pocket-pal/static/js/main.0d9758c1.chunk.js",
-    "main.js.map": "/pocket-pal/static/js/main.0d9758c1.chunk.js.map",
+    "main.js": "/pocket-pal/static/js/main.bb8e3f39.chunk.js",
+    "main.js.map": "/pocket-pal/static/js/main.bb8e3f39.chunk.js.map",
     "runtime-main.js": "/pocket-pal/static/js/runtime-main.06da99bc.js",
     "runtime-main.js.map": "/pocket-pal/static/js/runtime-main.06da99bc.js.map",
     "static/js/2.7a0e719c.chunk.js": "/pocket-pal/static/js/2.7a0e719c.chunk.js",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.06da99bc.js",
     "static/js/2.7a0e719c.chunk.js",
     "static/css/main.7138a70c.chunk.css",
-    "static/js/main.0d9758c1.chunk.js"
+    "static/js/main.bb8e3f39.chunk.js"
   ]
 }
