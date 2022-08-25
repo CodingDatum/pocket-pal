@@ -27,7 +27,7 @@ const Events = props => {
             <div className={styles.top}>
                 <button>Filter</button>
                 <h4>All Events</h4>
-                <button>Add Event</button>
+                <button>Add</button>
             </div>
             <div className={styles.main}>
 

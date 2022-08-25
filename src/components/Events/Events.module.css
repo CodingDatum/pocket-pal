@@ -18,15 +18,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 3px solid white;
+    padding-bottom: 1rem;
 }
 
 .top h4{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    font-weight:lighter;
+    letter-spacing: 0.1rem;
 }
 
 .top button{
-    width: 5.5rem;
-    height: 2rem;
+    width: 5rem;
+    height: 3rem;
     background-color: black;
     color: white;
     font-weight: bold;
