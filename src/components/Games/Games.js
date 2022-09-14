@@ -9,7 +9,8 @@ const Games = props => {
     const [gameLocation, setGameLocation ] = useState("games");
 
     const activeGameHandler = (statement) => {
-        setGameLocation(statement)
+        // setGameLocation(statement)
+        return
     }
 
     const goHomeHandler = () => {
