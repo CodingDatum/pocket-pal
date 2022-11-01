@@ -7,6 +7,15 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 1rem;
+    opacity: 0;
+    animation: reveal 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes reveal {
+    to{
+        opacity: 1;
+    }
 }
 
 .phrase{

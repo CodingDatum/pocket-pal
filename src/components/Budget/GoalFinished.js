@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Backdrop from '../UI/Backdrop';
 
 import styles from "./GoalFinished.module.css";
 
-const DUMMY_PHRASES = ["Way to go you!" , "Great job!" , "YASS QUEEN" , "Slaying it!" , "You did well..."];
+const DUMMY_PHRASES = ["Way to go you!" , "Great job!" , "YASS QUEEN!" , "Slaying it!" , "You did well..." , "Look at you go you sexy fuck!"];
 
 const GoalFinished = props => {
+
+    const findRandomPhrase = () => {
+        let randomNum = Math.floor(Math.random() * DUMMY_PHRASES.length)
+        let phraseToUse = DUMMY_PHRASES[randomNum]
+        return phraseToUse
+    }
 
     const buttonHandler = () => {
         props.closePopup()
@@ -14,8 +20,8 @@ const GoalFinished = props => {
     return(
         <Backdrop>
             <div className={styles.container}>
-                <div className={styles.phrase}>Congratulations you finished youer goal!</div>
-                <button onClick={buttonHandler}>OK</button>
+                <div className={styles.phrase}>{findRandomPhrase()}</div>
+                <button onClick={buttonHandler}>confirm</button>
             </div>
         </Backdrop>
     )
