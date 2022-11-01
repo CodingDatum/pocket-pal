@@ -5,6 +5,8 @@ import styles from "./GoalFinished.module.css";
 
 const DUMMY_PHRASES = ["Way to go you!" , "Great job!" , "YASS QUEEN" , "Slaying it!" , "You did well..."];
 
+// MAKE A DELAY FOR THE POPUP SO THAT THEY CAN SEE THE THERMOMETER FILL ALL THE WAY
+
 const GoalFinished = props => {
 
     const buttonHandler = () => {
