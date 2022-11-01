@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './Budget.module.css';
 import Button from '../UI/Button';
 import NumPad from '../UI/NumPad';
+import GoalFinished from './GoalFinished';
 
 const Budget = props => {
 
@@ -17,6 +18,7 @@ const Budget = props => {
     });
     const [isAddingMoney, setIsAddingMoney] = useState(false);
     const [isAddingTotal, setIsAddingTotal] = useState(false);
+    const [goalFinished, setGoalFinished] = useState(false);
 
     useEffect(()=>{
         localStorage.setItem("goal", JSON.stringify(goal));
@@ -25,6 +27,12 @@ const Budget = props => {
     useEffect(() => {
         localStorage.setItem("goal-progress", JSON.stringify(progress))
     }, [progress]);
+
+    useEffect(() => {
+        if(progress>=goal){
+            setGoalFinished(true)
+        }
+    },[progress, goal, setGoalFinished]);
 
     const addMoneyHandler = () => {
         setIsAddingMoney(true)
@@ -61,25 +69,28 @@ const Budget = props => {
     }
 
     return (
-        <div className={styles.budget}>
-            <div className={styles["budget-header"]}>
-                ${progress}/${goal}
-            </div>
-            <div className={styles["budget-container"]}>
-                <div className={styles["budget-buttons"]}>
-                    <Button onClick={addMoneyHandler} buttonName="Add Money" />
-                    <Button onClick={setGoalHandler} buttonName="New Goal"/>
-                    <Button onClick={refreshGoalHandler} buttonName="Refresh Amount"/>
+        <React.Fragment>
+            {goalFinished && <GoalFinished />}
+            <div className={styles.budget}>
+                <div className={styles["budget-header"]}>
+                    ${progress}/${goal}
                 </div>
-                <div className={styles["budget-tracker"]}>
-                    <div className={styles.tracker}>
-                        <div className={styles["tracker-inside"]} style={{height: newBar}}></div>
+                <div className={styles["budget-container"]}>
+                    <div className={styles["budget-buttons"]}>
+                        <Button onClick={addMoneyHandler} buttonName="Add Money" />
+                        <Button onClick={setGoalHandler} buttonName="New Goal"/>
+                        <Button onClick={refreshGoalHandler} buttonName="Refresh Amount"/>
+                    </div>
+                    <div className={styles["budget-tracker"]}>
+                        <div className={styles.tracker}>
+                            <div className={styles["tracker-inside"]} style={{height: newBar}}></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            {isAddingMoney && <NumPad submitButton={updateGoalHandler} />}
-            {isAddingTotal && <NumPad submitButton={changeGoal} />}
-    </div>
+                {isAddingMoney && <NumPad submitButton={updateGoalHandler} />}
+                {isAddingTotal && <NumPad submitButton={changeGoal} />}
+        </div>
+    </React.Fragment>
     )
 }
 
