@@ -30,7 +30,9 @@ const Budget = props => {
 
     useEffect(() => {
         if(progress>=goal){
-            setGoalFinished(true)
+            setTimeout(() => {
+                setGoalFinished(true)
+            }, 1000)
         }
     },[progress, goal, setGoalFinished]);
 
