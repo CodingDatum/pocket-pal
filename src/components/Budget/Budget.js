@@ -68,9 +68,13 @@ const Budget = props => {
         setIsAddingTotal(false)
     }
 
+    const closePopup = () => {
+        setGoalFinished(false)
+    }
+
     return (
         <React.Fragment>
-            {goalFinished && <GoalFinished />}
+            {goalFinished && <GoalFinished closePopup={closePopup} />}
             <div className={styles.budget}>
                 <div className={styles["budget-header"]}>
                     ${progress}/${goal}
