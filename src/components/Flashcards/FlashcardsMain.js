@@ -24,10 +24,10 @@ const FlashcardsMain = props => {
     }, [cardSide])
 
     const findFontSize = (content) => {
-        if(content.length <= 58){
+        if(content.length <= 50){
             return "2.25rem"
         }
-        if(content.length > 58){
+        if(content.length > 50){
             return "1.25rem"
         }
     }
